@@ -6,7 +6,8 @@ class App extends Component {
 		super(props);
 		this.state = {
 			contact: {
-				name: 'Makrand'
+				name: 'Makrand Gupta',
+				email: 'makrand1996@gmail.com'
 			},
 			xp: []
 		}
@@ -16,11 +17,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<div>MAKRAND GUPTA</div>
+				<div>{this.state.contact.name}</div>
 				<div>
 					<div>
 						<div>Contact</div>
-						<div>Name: {this.state.contact.name}</div>
+						<div>Email: {this.state.contact.email}</div>
 					</div>
 					<div>Experience</div>
 					<div>Education</div>
