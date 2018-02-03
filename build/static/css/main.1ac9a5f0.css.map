@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACC,kBACA,qBAAuB","file":"static/css/main.1ac9a5f0.css","sourcesContent":[".App {\r\n\ttext-align: center;\r\n\tfont-family: monospace;\r\n}\n\n\n// WEBPACK FOOTER //\n// ./src/App.css"],"sourceRoot":""}
