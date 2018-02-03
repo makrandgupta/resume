@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css'
 
 class App extends Component {
-	temp = 'test';
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -22,7 +20,7 @@ class App extends Component {
 				<div>
 					<div>
 						<div>Contact</div>
-						<div>Name: {this.temp}</div>
+						<div>Name: {this.state.contact.name}</div>
 					</div>
 					<div>Experience</div>
 					<div>Education</div>
