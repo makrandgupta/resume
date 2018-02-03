@@ -5,4 +5,5 @@ node_js:
 deploy:
   provider: surge
   project: ./build/
-  domain: makrandgupta.surge.sh  
+  domain: makrandgupta.surge.sh
+  skip_cleanup: true
