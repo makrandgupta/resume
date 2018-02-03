@@ -1,0 +1,1282 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mem",
+				"member"
+			],
+			[
+				"placed",
+				"placeId"
+			],
+			[
+				"status",
+				"status\t XMLHttpRequest"
+			],
+			[
+				"$ionic",
+				"$ionicHistory"
+			],
+			[
+				"htt",
+				"httpOptions"
+			],
+			[
+				"getprofile",
+				"getFacebookProfileInfo"
+			],
+			[
+				"old",
+				"description-oldURL\tHashChangeEvent"
+			],
+			[
+				"gender",
+				"gender-male"
+			],
+			[
+				"sear",
+				"searchTime"
+			],
+			[
+				"stor",
+				"storageService"
+			],
+			[
+				"mor",
+				"morning"
+			],
+			[
+				"grou",
+				"group"
+			],
+			[
+				"User",
+				"UserService"
+			],
+			[
+				"trip",
+				"tripId"
+			],
+			[
+				"mornin",
+				"morningTripFinished"
+			],
+			[
+				"sta",
+				"startDrive"
+			],
+			[
+				"inde",
+				"indexOf\t( searchElement: any, fromIndex?: int ): int Array"
+			],
+			[
+				"gro",
+				"group2"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"base",
+				"baseURL"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"lao",
+				"loading-bar"
+			],
+			[
+				"ang",
+				"angular-loading-bar"
+			],
+			[
+				"group",
+				"group1"
+			],
+			[
+				"gr1",
+				"group1"
+			],
+			[
+				"ids",
+				"idsToLoad"
+			],
+			[
+				"Grou",
+				"Group"
+			],
+			[
+				"Gro",
+				"Group"
+			],
+			[
+				"groupsload",
+				"groupsToLoad"
+			],
+			[
+				"first",
+				"firstTrip"
+			],
+			[
+				"Tran",
+				"Transactions"
+			],
+			[
+				"unp",
+				"unpaidTransactions"
+			],
+			[
+				"load",
+				"loadComplete"
+			],
+			[
+				"showd",
+				"showToastDefault"
+			],
+			[
+				"lean",
+				"learnedUsers"
+			],
+			[
+				"local",
+				"localStorage\t: Storage Window"
+			],
+			[
+				"setsec",
+				"setSecure"
+			],
+			[
+				"Secure",
+				"SecureStorage"
+			],
+			[
+				"servic",
+				"service\tAngularJS"
+			],
+			[
+				"email",
+				"emailOptions"
+			],
+			[
+				"ema",
+				"emailOptions"
+			],
+			[
+				"CR",
+				"CRON.monthly.unpaidInvoices"
+			],
+			[
+				"remo",
+				"remoteURL"
+			],
+			[
+				"consta",
+				"constant\tAngularJS"
+			],
+			[
+				"inv",
+				"invoiceId"
+			],
+			[
+				"att",
+				"attendee"
+			],
+			[
+				"transac",
+				"transaction"
+			],
+			[
+				"transact",
+				"transactionAmount"
+			],
+			[
+				"getele",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Document"
+			],
+			[
+				"cus",
+				"customerData"
+			],
+			[
+				"charge",
+				"chargeData"
+			],
+			[
+				"user",
+				"userService"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"baseu",
+				"baseURLs"
+			],
+			[
+				"async",
+				"asyncdone"
+			],
+			[
+				"randto",
+				"randtoken"
+			],
+			[
+				"reso",
+				"response"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"clearca",
+				"clearCacheAndGo"
+			],
+			[
+				"target",
+				"targetState"
+			],
+			[
+				"refresh",
+				"refresh_token"
+			],
+			[
+				"QUICKBO",
+				"QUICKBOOKS_REALM_ID"
+			],
+			[
+				"emal",
+				"emailVerificationPromise"
+			],
+			[
+				"gr",
+				"group"
+			],
+			[
+				"round",
+				"roundtrip"
+			],
+			[
+				"useri",
+				"userId"
+			],
+			[
+				"uniq",
+				"uniqueGroups"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
+				"onite",
+				"onItemClick"
+			],
+			[
+				"on",
+				"onItemClick"
+			],
+			[
+				"sub",
+				"subLabel"
+			],
+			[
+				"roun",
+				"roundtrip"
+			],
+			[
+				"eve",
+				"evening"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"clog",
+				"console_log"
+			],
+			[
+				"Group",
+				"GroupService"
+			],
+			[
+				"me",
+				"members"
+			],
+			[
+				"cl",
+				"console"
+			],
+			[
+				"ca",
+				"callback"
+			],
+			[
+				"tota",
+				"total_revenue"
+			],
+			[
+				"line",
+				"total_line_items_price"
+			],
+			[
+				"tax",
+				"taxes_included"
+			],
+			[
+				"do_st",
+				"do_stop"
+			],
+			[
+				"sp",
+				"spin_unlock"
+			],
+			[
+				"spi",
+				"spin_lock"
+			],
+			[
+				"spinL",
+				"spin_lock"
+			],
+			[
+				"my",
+				"my_list"
+			],
+			[
+				"spin",
+				"spin_unlock"
+			],
+			[
+				"pi",
+				"pidlist_lock"
+			],
+			[
+				"des",
+				"destroy_list"
+			],
+			[
+				"check",
+				"check_pid_from_list"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "import React, { Component } from 'react';\n\nclass App extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t<div></div>\n\t\t\t\tdiv\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default App;",
+			"file": "src/App.jsx",
+			"file_size": 172,
+			"file_write_time": 131621640764212632,
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "remo",
+		"selected_items":
+		[
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"jsprettier",
+				"Preferences: JsPrettier Settings - Default"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"diff",
+				"Git: Diff All Files"
+			],
+			[
+				"hmlpre set",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"htm",
+				"HTMLPrettify"
+			],
+			[
+				"",
+				"AngularJS: Look Up Definition"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"mater",
+				"Material Theme: Configuration"
+			],
+			[
+				"gitgu",
+				"Git: Gui"
+			],
+			[
+				"m",
+				"Material Theme: Activate theme"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"editorcon",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"commi",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"add a",
+				"Git: Add All"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"add ",
+				"Git: Add Current File"
+			],
+			[
+				"git add c",
+				"Git: Add Current File"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"pretty js",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"act",
+				"Material Theme: Activate theme"
+			],
+			[
+				"package cont",
+				"Package Control: Remove Package"
+			],
+			[
+				"acti",
+				"Material Theme: Activate theme"
+			],
+			[
+				"clea",
+				"SVN: Cleanup"
+			],
+			[
+				"SVN",
+				"SVN: Commit…"
+			],
+			[
+				"show",
+				"SVN: Show Applicable Folder Commands"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			]
+		],
+		"width": 592.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/Documents/Projects/personal-website",
+		"/E/Documents/Projects/personal-website/src"
+	],
+	"file_history":
+	[
+		"/E/Documents/Projects/personal-website/.eslintrc",
+		"/E/Documents/Projects/personal-website/src/index.js",
+		"/E/Documents/Projects/personal-website/src/App.jsx",
+		"/E/Documents/SwiftSeat/server/.gitignore",
+		"/E/Documents/SwiftSeat/server/services/quickbooks/index.js",
+		"/E/Documents/SwiftSeat/server/services/onesignal/onesignal.controller.js",
+		"/E/Documents/SwiftSeat/server/services/onesignal/index.js",
+		"/E/Documents/SwiftSeat/server/models/user.js",
+		"/C/Users/Makrand/AppData/Roaming/Sublime Text 3/Packages/JsPrettier/JsPrettier.sublime-settings",
+		"/E/Documents/SwiftSeat/server/routes/api/group.js",
+		"/E/request.model.js",
+		"/E/Documents/SwiftSeat/api/index.js",
+		"/E/Documents/SwiftSeat/api/app.js",
+		"/E/Documents/SwiftSeat/api/group/group.controller.js",
+		"/E/Documents/SwiftSeat/api/.gitignore",
+		"/E/Documents/SwiftSeat/api/cron/index.js",
+		"/E/Documents/SwiftSeat/api/trip/trip.controller.js",
+		"/E/Documents/SwiftSeat/api/group/index.js",
+		"/E/Documents/SwiftSeat/api/utils/email/email.controller.js",
+		"/E/Documents/SwiftSeat/api/utils/email/index.js",
+		"/E/Documents/SwiftSeat/api/emailService.js",
+		"/E/Documents/SwiftSeat/api/config/www",
+		"/E/Documents/SwiftSeat/api/README.md",
+		"/E/Documents/SwiftSeat/api/package.json",
+		"/E/Documents/SwiftSeat/api/auth/index.js",
+		"/E/Documents/SwiftSeat/api/auth/token/index.js",
+		"/E/Documents/SwiftSeat/api/auth/logout/index.js",
+		"/E/Documents/SwiftSeat/api/trip/trip.js",
+		"/E/Documents/SwiftSeat/api/services/stripe.js",
+		"/E/Documents/SwiftSeat/api/user/user.model.js",
+		"/E/Documents/SwiftSeat/api/search/search.js",
+		"/E/Documents/SwiftSeat/api/cron/cron.js",
+		"/E/Documents/SwiftSeat/api/group/group.js",
+		"/E/Documents/SwiftSeat/api/services/firebase/index.js",
+		"/E/Documents/SwiftSeat/api/services/firebase/firebase.controller.js",
+		"/E/Documents/SwiftSeat/api/auth/token/token.controller.js",
+		"/E/Documents/SwiftSeat/api/auth/local/local.controller.js",
+		"/E/Documents/SwiftSeat/api/auth/facebook/facebook.controller.js",
+		"/E/Documents/SwiftSeat/api/verify/email.js",
+		"/E/Documents/SwiftSeat/api/support.js",
+		"/E/Documents/SwiftSeat/api/user/user.controller.js",
+		"/E/Documents/SwiftSeat/api/auth/logout/logout.controller.js",
+		"/E/Documents/SwiftSeat/api/services/quickbooks.js",
+		"/E/Documents/SwiftSeat/api/user/index.js",
+		"/E/Documents/SwiftSeat/api/config/ss-api.sublime-project",
+		"/E/Documents/SwiftSeat/api/config/constants.js",
+		"/E/Documents/SwiftSeat/api/cost/othercost.model.js",
+		"/E/Documents/SwiftSeat/api/.prettierrc",
+		"/E/Documents/SwiftSeat/api/config/firebase-private.json",
+		"/C/Users/Makrand/AppData/Roaming/Sublime Text 3/Packages/User/JsPrettier.sublime-settings",
+		"/E/Documents/SwiftSeat/api/config/ss-api.sublime-workspace",
+		"/E/Documents/SwiftSeat/api/auth/facebook/index.js",
+		"/E/Documents/SwiftSeat/api/.prettierrc.js",
+		"/E/Documents/SwiftSeat/api/cost/costService.js",
+		"/E/Documents/SwiftSeat/api/auth/token.model.js",
+		"/E/Documents/SwiftSeat/api/views/index.hbs",
+		"/E/Documents/SwiftSeat/api/views/error.hbs",
+		"/E/Documents/SwiftSeat/api/.env",
+		"/E/Documents/carpool/frontend/package.json",
+		"/E/Documents/SwiftSeat/api/routes/index.js",
+		"/E/Documents/SwiftSeat/api/models/blacklist.js",
+		"/E/Documents/SwiftSeat/api/routes.js",
+		"/E/Documents/SwiftSeat/api/routes/utils/email/index.js",
+		"/E/Documents/SwiftSeat/api/routes/api/email.js",
+		"/E/Documents/SwiftSeat/api/routes/api/users/users.controller.js",
+		"/E/Documents/SwiftSeat/api/SwiftSeat API.postman_collection.json",
+		"/E/Documents/SwiftSeat/api/models/token.js",
+		"/E/Documents/SwiftSeat/api/routes/auth/SS - Auth.postman_collection.json",
+		"/E/Documents/SwiftSeat/api/routes/api/group.js",
+		"/E/Documents/SwiftSeat/api/app.json",
+		"/E/Documents/carpool/frontend/www/templates/register/register.html",
+		"/E/Documents/SwiftSeat/api/routes/api/cron.js",
+		"/E/Documents/SwiftSeat/api/routes/api/support.js",
+		"/E/Documents/SwiftSeat/api/routes/api/users/index.js",
+		"/E/Documents/SwiftSeat/api/routes/util/email/index.js",
+		"/E/Documents/SwiftSeat/api/routes/api/emailService.js",
+		"/E/Documents/SwiftSeat/api/routes/util/email/email.controller.js",
+		"/C/Users/Makrand/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/C/Users/Makrand/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/E/Documents/SwiftSeat/api/.jsbeautifyrc",
+		"/E/Documents/carpool/frontend/www/js/services/user.service.js",
+		"/E/Documents/carpool/frontend/www/js/services/date.service.js",
+		"/E/Documents/carpool/frontend/.editorconfig",
+		"/E/Documents/carpool/backend/routes/auth/common/common.controller.js",
+		"/E/Documents/carpool/backend/routes/auth/common/index.js",
+		"/E/Documents/carpool/frontend/www/js/services/group.service.js",
+		"/E/Documents/carpool/frontend/www/js/services/maps.service.js",
+		"/E/Documents/carpool/frontend/www/js/services/storage.service.js",
+		"/E/Documents/carpool/frontend/www/js/services/toast.service.js",
+		"/E/Documents/carpool/backend/models/group.js",
+		"/E/Documents/carpool/backend/models/user.js",
+		"/E/Documents/carpool/backend/models/othercost.js",
+		"/E/Documents/carpool/backend/app.js",
+		"/E/Documents/carpool/backend/routes/api/quickbooks.js",
+		"/E/Documents/carpool/backend/routes/api/cron.js",
+		"/E/Documents/carpool/backend/routes/api/trip.js",
+		"/E/Documents/carpool/backend/routes/auth/local/index.js",
+		"/E/Documents/carpool/backend/routes/auth/local/local.controller.js",
+		"/C/Users/Makrand/AppData/Roaming/Sublime Text 3/Packages/All Autocomplete/All Autocomplete.sublime-settings",
+		"/E/Documents/carpool/backend/routes/api/user.js",
+		"/E/Documents/carpool/frontend/www/js/directives/stripe/stripe.controller.js",
+		"/E/Documents/carpool/frontend/www/js/directives/stripe/stripe.html",
+		"/E/Documents/carpool/frontend/www/templates/register/register.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/login/login.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/home/home.html",
+		"/E/Documents/carpool/frontend/www/templates/setup/setup.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/learn/learn.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/setup-creditcard/setup-creditcard.html",
+		"/E/Documents/carpool/frontend/www/css/style.css",
+		"/E/Documents/carpool/frontend/www/templates/setup/setup.html",
+		"/E/Documents/carpool/frontend/www/js/app.js",
+		"/E/Documents/carpool/frontend/www/index.html",
+		"/E/Documents/carpool/frontend/www/templates/setup-billing/setup-creditcard.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/setup-billing/setup-creditcard.html",
+		"/E/Documents/carpool/frontend/www/templates/settings/settings.controller.js",
+		"/E/Documents/carpool/backend/.env",
+		"/E/Documents/carpool/frontend/www/templates/register/register.css",
+		"/E/Documents/carpool/frontend/bower.json",
+		"/E/Documents/carpool/frontend/www/templates/home/home.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/login/login.html",
+		"/E/Documents/carpool/frontend/www/templates/setup-billing/setup-billing.html",
+		"/E/Documents/carpool/frontend/www/templates/register/register-old.css",
+		"/E/Documents/carpool/frontend/www/templates/signup/signup.css",
+		"/E/Documents/carpool/frontend/www/templates/results/results.controller.js",
+		"/E/Documents/carpool/frontend/www/templates/search/search.controller.js",
+		"/E/Documents/carpool/frontend/www/js/services/helper.service.js",
+		"/E/Documents/carpool/frontend/www/templates/search/search.html",
+		"/E/Documents/carpool/frontend/www/templates/firstHome/firstHome.css"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 164.0,
+		"where_history":
+		[
+			"-*/node_modules*"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"return",
+			"var Trip = require(`${appRoot}/trip/tripmap.model`)",
+			"var OtherCost = require(appRoot + '/models/othercost')",
+			"JoinRequest",
+			"JoinRequestSchema",
+			"serviceAccount",
+			"firebase-private.json",
+			"var constants = require(appRoot + '/constants')",
+			"serviceAccount",
+			"var Transaction = require(appRoot + '/models/transaction')",
+			"var TripMap = require(appRoot + '/models/tripmap')",
+			"var Trip = require(appRoot + '/models/trip')",
+			"var costCalc = require(appRoot + '/routes/api/costService.js')",
+			"var quickbooks = require(`${appRoot}/services/quickbooks.controller`)",
+			"var quickbooks = require(`${appRoot}/services/email/email.controller`)",
+			"var quickbooks = require(appRoot + '/routes/utils/email/email.controller')",
+			"var emailService = require(appRoot + '/routes/utils/email/email.controller')",
+			"var quickbooks = require(`${appRoot}/services/quickbooks`)",
+			"var quickbooks = require(appRoot + '/routes/api/quickbooks.js')",
+			"var JoinRequest = require(appRoot + '/models/joinrequest')",
+			"var Group = require(appRoot + '/models/group')",
+			"var Blacklist = require(appRoot + '/models/blacklist')",
+			"var Token = require(appRoot + '/models/token')",
+			"var User = require(appRoot + '/models/user')",
+			"var protect = require(appRoot + '/routes/auth/protect')",
+			"api",
+			"'",
+			"('",
+			"'.",
+			".",
+			"facebook",
+			"routes",
+			"require(appRoot + '/models/user')",
+			"OtherCost",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"var TripMap = require(`${appRoot}/trip/tripmap.model`)",
+			"var Cost = require(`${appRoot}/cost/cost.model`)",
+			"var constants = require(`${appRoot}/config/constants`)",
+			"var Transaction = require(`${appRoot}/transaction/transaction.model`)",
+			"var Trip = require(`${appRoot}/trip/tripmap.model`)",
+			"var Trip = require(`${appRoot}/trip/trip.model`)",
+			"var costService = require(`${appRoot}/cost/cost.service`)",
+			"var quickbooks = require(`${appRoot}/services/quickbooks/quickbooks.controller`)",
+			"var email = require(`${appRoot}/services/email/email.controller`)",
+			"var quickbooks = require(`${appRoot}/services/email/email.controller`)",
+			"var quickbooks = require(`${appRoot}/services/quickbooks.controller`)",
+			"var quickbooks = require(`${appRoot}/services/quickbooks`)",
+			"var Request = require(`${appRoot}/request/request.model`)",
+			"var Group = require(`${appRoot}/group/group.model`)",
+			"var Blacklist = require(`${appRoot}/auth/token/blacklist.model`)",
+			"var Token = require(`${appRoot}/auth/token/token.model`)",
+			"var User = require(`${appRoot}/user/user.model`)",
+			"var protect = require(`${appRoot}/auth/protect`)"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/App.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										141,
+										142
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										94,
+										95
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										141,
+										142
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										94,
+										95
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 352.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "test",
+	"project": "personal.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mainpage",
+				"frontend\\www\\css\\main.page.css"
+			],
+			[
+				"load",
+				"frontend\\www\\templates\\loading-bar.css"
+			],
+			[
+				"apigrou",
+				"backend\\routes\\api\\group.js"
+			],
+			[
+				"modelgrou",
+				"backend\\models\\group.js"
+			],
+			[
+				"search.",
+				"backend\\routes\\api\\search.js"
+			],
+			[
+				"quic",
+				"backend\\routes\\api\\quickbooks.js"
+			],
+			[
+				"menucontro",
+				"frontend\\www\\templates\\menu\\menu.controller.js"
+			],
+			[
+				"userser",
+				"frontend\\www\\js\\services\\user.service.js"
+			],
+			[
+				"groupserv",
+				"frontend\\www\\js\\services\\group.service.js"
+			],
+			[
+				"backendgroup",
+				"backend\\routes\\api\\group.js"
+			],
+			[
+				"groupcontroller",
+				"frontend\\www\\templates\\group\\group.controller.js"
+			],
+			[
+				"backendconn",
+				"frontend\\www\\js\\services\\backend-connector-service.js"
+			],
+			[
+				"groupserve",
+				"frontend\\www\\js\\services\\group.service.js"
+			],
+			[
+				"resultscon",
+				"frontend\\www\\templates\\results\\results.controller.js"
+			],
+			[
+				"men",
+				"frontend\\www\\templates\\menu\\menu.html"
+			],
+			[
+				"app",
+				"frontend\\www\\js\\app.js"
+			],
+			[
+				"setupcontro",
+				"frontend\\www\\templates\\setup\\setup.controller.js"
+			],
+			[
+				"menucontr",
+				"frontend\\www\\templates\\menu\\menu.controller.js"
+			],
+			[
+				"homeconto",
+				"frontend\\www\\templates\\home\\home.controller.js"
+			],
+			[
+				"logincontroller",
+				"frontend\\www\\templates\\login\\login.controller.js"
+			],
+			[
+				"algebralinecom",
+				"mathematic-maker\\src\\lib\\components\\toolbarTools\\algebraLines\\AlgebraLineComponent.hx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\Documents\\SwiftSeat\\api\\config\\ss-api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
