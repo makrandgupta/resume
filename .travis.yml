@@ -3,4 +3,4 @@ node_js:
   - "8.7.0"
 after_success:
   - yarn build
-  - surge --project ./build --domain resume.makgupta.surge.sh
+  - surge --project ./build --domain resume.makgupta.com
