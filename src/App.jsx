@@ -26,7 +26,7 @@ class App extends Component {
 					</div>
 					<div>Experience</div>
 					<div>Education: {this.state.education}</div>
-					<div>Skills</div>
+					<div>Skills: React</div>
 				</div>
 			</div>
 		)
