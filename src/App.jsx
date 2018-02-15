@@ -7,9 +7,10 @@ class App extends Component {
 		this.state = {
 			contact: {
 				name: 'Makrand Gupta',
-				email: 'makrand1996@gmail.com'
+				email: 'makrand1996@gmail.com',
 			},
-			xp: []
+			education: 'UofT',
+			xp: [],
 		}
 	}
 
@@ -24,7 +25,7 @@ class App extends Component {
 						<div>Email: {this.state.contact.email}</div>
 					</div>
 					<div>Experience</div>
-					<div>Education</div>
+					<div>Education: {this.state.education}</div>
 					<div>Skills</div>
 				</div>
 			</div>
