@@ -1,36 +1,29 @@
 import React, { Component } from 'react';
-import './App.css'
+import './styles.css';
+import { name } from './data.json';
+import Contact from './components/Contact/Contact';
+import Education from './components/Education/Education';
+import Experience from './components/Experience/Experience';
+import Skills from './components/Skills/Skills';
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			contact: {
-				name: 'Makrand Gupta',
-				email: 'makrand1996@gmail.com',
-			},
-			education: 'UofT',
-			xp: [],
-		}
-	}
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name,
+    };
+  }
+	
+  render() {
+    return (
+      <div className="app">
+        <div className="app-title">{this.state.name}</div>
+        <Contact/>
 
-
-	render() {
-		return (
-			<div className="App">
-				<div>{this.state.contact.name}</div>
-				<div>
-					<div>
-						<div>Contact</div>
-						<div>Email: {this.state.contact.email}</div>
-					</div>
-					<div>Experience</div>
-					<div>Education: {this.state.education}</div>
-					<div>Skills: ReactJS</div>
-				</div>
-			</div>
-		)
-	}
+        <Education/>
+        <Experience/>
+        <Skills/>
+      </div>
+    );
+  }
 }
-
-export default App;

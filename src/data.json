@@ -1,0 +1,55 @@
+{
+    "name": "Makrand Gupta",
+    "contact": {
+        "email": "makrand1996@gmail.com",
+        "phone": 6478889999
+    },
+    "education": [
+        {
+            "degree": "Bachelors of Science",
+            "field": "Computer Science, Statistics",
+            "school": "University of Toronto",
+            "location": {
+                "city": "Toronto",
+                "country": "Canada"
+            }
+        }
+    ],
+    "experience": [
+        {
+            "title": "CTO",
+            "company": "SwiftSeat",
+            "from": {
+                "month": 7,
+                "year": 2017
+            },
+            "currentPosition": true,
+            "description": "<ul><li>task 1</li><li>task 2</li><li>task 3</li></ul>",
+            "location": {
+                "city": "Toronto",
+                "country": "Canada"
+            }
+        },
+        {
+            "title": "Software Developer",
+            "company": "Connected",
+            "from": {
+                "month": 5,
+                "year": 2018
+            },
+            "to": {
+                "month": 8,
+                "year": 2018
+            },
+            "description": "started company and stuff",
+            "location": {
+                "city": "Toronto",
+                "country": "Canada"
+            }
+        }
+    ],
+    "skills": [
+        "ReactJS",
+        "AngularJS"
+    ]
+}
