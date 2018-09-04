@@ -1,0 +1,23 @@
+.app {
+	text-align: center;
+	font-family: monospace;
+	padding: 20px;
+}
+
+.app-title {
+	font-size: 3rem;
+	padding-bottom: 20px;
+}
+
+.component-container {
+	padding: 10px;
+	text-align: left;
+}
+
+.component-title {
+	font-size: 2rem;
+}
+
+.component-contents {
+	
+}
