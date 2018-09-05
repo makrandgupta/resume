@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { experience } from '../../data.json';
+import './Experience.css';
 
 export default class Experience extends Component {
   constructor(props) {
@@ -16,10 +17,10 @@ export default class Experience extends Component {
         <div className="component-content">
           {
             this.state.experience.map((xp, i) => (
-              <div key={i}>
-                <div>{xp.title}</div>
-                <div>{xp.company}</div>
-                <div>{xp.location.city}, {xp.location.country}</div>
+              <div className="experience-container" key={i}>
+                <div className="experience-title">{xp.title}</div>
+                <div className="experience-company">{xp.company}</div>
+                <div className="experience-location">{xp.location.city}, {xp.location.country}</div>
               </div>
             ))
           }

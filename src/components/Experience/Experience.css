@@ -1,0 +1,17 @@
+.experience-container {
+    padding: 15px 0;
+}
+.experience-container:first-child {
+    padding-top: 0px;
+}
+.experience-container:last-child {
+    padding-bottom: 0px;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+}
+
+.experience-company {
+    font-size: 1.1rem;
+}
