@@ -1,9 +1,23 @@
 {
     "name": "Makrand Gupta",
-    "contact": {
-        "email": "makrand1996@gmail.com",
-        "phone": 6478889999
-    },
+    "contact": [
+        {
+            "type": "email",
+            "value": "makrand1996@gmail.com"
+        },
+        {
+            "type": "github",
+            "value": "makrandgupta"
+        },
+        {
+            "type": "linkedIn",
+            "value": "makrandgupta"
+        },
+        {
+            "type": "phone",
+            "value": 6478889999
+        }
+    ],
     "education": [
         {
             "degree": "Bachelors of Science",
@@ -41,7 +55,24 @@
                 "month": 8,
                 "year": 2018
             },
-            "description": "started company and stuff",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Turpis in eu mi bibendum neque egestas congue quisque. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Odio facilisis mauris sit amet massa vitae tortor.",
+            "location": {
+                "city": "Toronto",
+                "country": "Canada"
+            }
+        },
+        {
+            "title": "Software Developer",
+            "company": "Developers' Foundation",
+            "from": {
+                "month": 5,
+                "year": 2018
+            },
+            "to": {
+                "month": 8,
+                "year": 2018
+            },
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Turpis in eu mi bibendum neque egestas congue quisque. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Odio facilisis mauris sit amet massa vitae tortor.",
             "location": {
                 "city": "Toronto",
                 "country": "Canada"
