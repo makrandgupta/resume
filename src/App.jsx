@@ -19,10 +19,9 @@ export default class App extends Component {
       <div className="app">
         <div className="app-title">{this.state.name}</div>
         <Contact/>
-
-        <Education/>
         <Experience/>
         <Skills/>
+        <Education/>
       </div>
     );
   }
