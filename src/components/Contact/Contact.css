@@ -1,0 +1,9 @@
+.contact-container {
+    flex-basis: content;
+    flex-grow: 1;
+}
+
+.contact-header {
+    font-weight: 900;
+    text-transform: capitalize; 
+}
