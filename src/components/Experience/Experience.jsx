@@ -18,12 +18,18 @@ export default class Experience extends Component {
           {
             this.state.experience.map((xp, i) => (
               <div className="experience-container" key={i}>
-                <div className="experience-title">{xp.title}</div>
-                <div className="experience-company">{xp.company}</div>
-                <div className="experience-location">{xp.location.city}, {xp.location.country}</div>
+                <div className="experience-metadata">
+                  <div className="experience-company">{xp.company}</div>
+                  <div className="experience-location">{xp.location.city}, {xp.location.country}</div>
+                </div>
+                <div className="experience-data">
+                  <div className="experience-title">{xp.title}</div>
+                  <div className="experience-description" dangerouslySetInnerHTML={{ __html: xp.description }} />
+                </div>
               </div>
             ))
           }
+          <div className="experience-clear"></div>
         </div>
       </div>
     );

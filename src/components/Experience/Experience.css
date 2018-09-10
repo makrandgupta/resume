@@ -1,6 +1,24 @@
 .experience-container {
     padding: 15px 0;
+    clear: both;
 }
+
+.experience-metadata {
+    width: 30%;
+    display: block;
+    float: left;
+}
+
+.experience-data {
+    width: 70%;
+    display: block;
+    float: left;
+}
+
+.experience-clear {
+    clear: both;
+}
+
 .experience-container:first-child {
     padding-top: 0px;
 }
