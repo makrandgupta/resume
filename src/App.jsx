@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles.css';
+import './App.css';
 import { name } from './data.json';
 import Contact from './components/Contact/Contact';
 import Education from './components/Education/Education';
