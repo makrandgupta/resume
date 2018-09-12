@@ -1,16 +1,15 @@
+import './Contact.css';
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
-import { contact } from '../../data.json';
 import AddButton from '../Buttons/AddButton/AddButton';
 import CloseButton from '../Buttons/CloseButton/CloseButton';
-import './Contact.css';
-
+import firebase from '../../services/firebase';
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contact,
+      contact: [],
       showModal: true,
       newType: '',
       newValue: '',
@@ -19,8 +18,28 @@ export default class Contact extends Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleFormChange = this.handleFormChange.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
+  componentDidMount() {
+    const contactRef = firebase.database().ref('contact');
+    contactRef.on('value', (snapshot) => {
+      let contact = snapshot.val();
+      let newState = [];
+      for (let item in contact) {
+        newState.push({
+          id: item,
+          type: contact[item].type,
+          value: contact[item].value
+        });
+      }
+      this.setState({
+        contact: newState
+      });
+    });
+  }
+
+  
   handleOpenModal() {
     this.setState({
       showModal: true,
@@ -39,6 +58,20 @@ export default class Contact extends Component {
     });
   }
 
+  handleFormSubmit(e) {
+    e.preventDefault();
+    const contactRef = firebase.database().ref('contact');
+    const newContact = {
+      type: this.state.newType,
+      value: this.state.newValue
+    };
+    contactRef.push(newContact);
+    this.setState({
+      newType: '',
+      newValue: ''
+    });
+  }
+  
   render() {
     return (
       <div className="component-container">
@@ -61,7 +94,7 @@ export default class Contact extends Component {
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
         >
-          <form>
+          <form onSubmit={this.handleFormSubmit}>
             <input type="text" name="newType" onChange={this.handleFormChange} placeholder="What's the type of contact?" value={this.state.newType}/>
             <input type="text" name="newValue" onChange={this.handleFormChange} placeholder="What's the contact info?"  value={this.state.newValue}/>
             <button>Add Contact</button>
