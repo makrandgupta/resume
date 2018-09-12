@@ -11,11 +11,14 @@ export default class Contact extends Component {
     super(props);
     this.state = {
       contact,
-      showModal: false,
+      showModal: true,
+      newType: '',
+      newValue: '',
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleFormChange = this.handleFormChange.bind(this);
   }
 
   handleOpenModal() {
@@ -30,12 +33,18 @@ export default class Contact extends Component {
     });
   }
 
+  handleFormChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
   render() {
     return (
       <div className="component-container">
         <div className="component-title">
           Contact
-          <AddButton onClick={this.handleOpenModal}/>
+          <AddButton onClick={this.handleOpenModal} />
         </div>
         <div className="component-content flex horizontal wrap space-evenly">
           {
@@ -52,8 +61,11 @@ export default class Contact extends Component {
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
         >
-          Type: [INPUT CONTACT TYPE] <br />
-          Value: [INPUT CONTACT VALUE]
+          <form>
+            <input type="text" name="newType" onChange={this.handleFormChange} placeholder="What's the type of contact?" value={this.state.newType}/>
+            <input type="text" name="newValue" onChange={this.handleFormChange} placeholder="What's the contact info?"  value={this.state.newValue}/>
+            <button>Add Contact</button>
+          </form>
           <CloseButton onClick={this.handleCloseModal} />
         </ReactModal>
       </div>
