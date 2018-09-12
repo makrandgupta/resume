@@ -6,16 +6,16 @@
             "value": "makrand1996@gmail.com"
         },
         {
+            "type": "phone",
+            "value": 6478889999
+        },
+        {
             "type": "github",
             "value": "makrandgupta"
         },
         {
             "type": "linkedIn",
             "value": "makrandgupta"
-        },
-        {
-            "type": "phone",
-            "value": 6478889999
         }
     ],
     "education": [
