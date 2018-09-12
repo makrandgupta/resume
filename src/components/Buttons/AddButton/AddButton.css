@@ -1,0 +1,9 @@
+.addButton-container {
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 1rem;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    border: darkgreen 2px solid;
+}
