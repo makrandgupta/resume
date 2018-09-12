@@ -1,5 +1,6 @@
 body {
 	font-size: 1.2rem;
+	padding: 0 20%;
 }
 
 .app {
@@ -20,6 +21,8 @@ body {
 
 .component-title {
 	font-size: 2rem;
+	display: flex;
+	align-items: center;
 }
 
 .component-content {
