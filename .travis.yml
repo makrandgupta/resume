@@ -2,5 +2,8 @@ language: node_js
 node_js:
   - "8.7.0"
 after_success:
+  - cd src/services
+  - node generate-firebase-config.js
+  - cd ../..
   - yarn build
   - surge --project ./build --domain resume.makgupta.com
