@@ -1,77 +1,68 @@
+import _ from 'lodash';
 import './Contact.css';
-import React, { Component } from 'react';
+import React from 'react';
 import ReactModal from 'react-modal';
-import AddButton from '../Buttons/AddButton/AddButton';
-import CloseButton from '../Buttons/CloseButton/CloseButton';
-import firebase from '../../services/firebase';
 
-export default class Contact extends Component {
+import AddButton from '../Buttons/AddButton/AddButton';
+import AddContactForm from '../AddContactForm';
+import CloseButton from '../Buttons/CloseButton/CloseButton';
+
+import base from '../../services/base';
+
+class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contact: [],
-      showModal: true,
-      newType: '',
-      newValue: '',
+      showModal: false,
+      contacts: {}
     };
-
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-    this.handleFormChange = this.handleFormChange.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   componentDidMount() {
-    const contactRef = firebase.database().ref('contact');
-    contactRef.on('value', (snapshot) => {
-      let contact = snapshot.val();
-      let newState = [];
-      for (let item in contact) {
-        newState.push({
-          id: item,
-          type: contact[item].type,
-          value: contact[item].value
-        });
-      }
-      this.setState({
-        contact: newState
-      });
+    this.ref = base.syncState('contacts', {
+      context: this,
+      state: 'contacts'
     });
   }
 
-  
-  handleOpenModal() {
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
+
+
+  addContact = (type, value) => {
+    const contacts = this.state.contacts;
+    contacts[`contact${Date.now()}`] = { type, value };
+    this.setState({ contacts });
+  };
+
+  // START: Modal handlers
+
+  handleOpenModal = () => {
     this.setState({
-      showModal: true,
+      showModal: true
     });
   }
 
-  handleCloseModal() {
+  handleCloseModal = () => {
     this.setState({
-      showModal: false,
+      showModal: false
     });
   }
 
-  handleFormChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+  // END: Modal handlers
+
+  renderContact = (key) => {
+    const contact = this.state.contacts[key];
+
+    return (
+      <div className="contact-container" key={key}>
+        <div className="contact-header">{contact.type}</div>
+        <div className="contact-data">{contact.value}</div>
+      </div>
+    )
   }
 
-  handleFormSubmit(e) {
-    e.preventDefault();
-    const contactRef = firebase.database().ref('contact');
-    const newContact = {
-      type: this.state.newType,
-      value: this.state.newValue
-    };
-    contactRef.push(newContact);
-    this.setState({
-      newType: '',
-      newValue: ''
-    });
-  }
-  
   render() {
     return (
       <div className="component-container">
@@ -80,28 +71,19 @@ export default class Contact extends Component {
           <AddButton onClick={this.handleOpenModal} />
         </div>
         <div className="component-content flex horizontal wrap space-evenly">
-          {
-            this.state.contact.map((contact, i) => (
-              <div className="contact-container" key={i}>
-                <div className="contact-header">{contact.type}</div>
-                <div className="contact-data">{contact.value}</div>
-              </div>
-            ))
-          }
+          {_.keys(this.state.contacts).map(this.renderContact)}
         </div>
 
         <ReactModal
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
         >
-          <form onSubmit={this.handleFormSubmit}>
-            <input type="text" name="newType" onChange={this.handleFormChange} placeholder="What's the type of contact?" value={this.state.newType}/>
-            <input type="text" name="newValue" onChange={this.handleFormChange} placeholder="What's the contact info?"  value={this.state.newValue}/>
-            <button>Add Contact</button>
-          </form>
+          <AddContactForm addContact={this.addContact} />
           <CloseButton onClick={this.handleCloseModal} />
         </ReactModal>
       </div>
     );
   }
 }
+
+export default Contact;

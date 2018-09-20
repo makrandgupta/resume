@@ -1,12 +1,42 @@
-import React, { Component } from 'react';
-import { education } from '../../data.json';
+import _ from 'lodash';
 
-export default class Education extends Component {
+import React from 'react';
+
+import base from '../../services/base';
+
+export default class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      education,
+      educations: {},
     };
+  }
+
+  componentDidMount() {
+    this.ref = base.syncState('educations', {
+      context: this,
+      state: 'educations'
+    });
+  }
+
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
+
+  renderEducation = (key) => {
+    const { educations } = this.state;
+
+    return (
+      <div className="contact-container" key={key}>
+        <div className="contact-header">{educations[key].type}</div>
+        <div className="contact-data">
+          <div>{educations[key].school}</div>
+          <div>{educations[key].degree}</div>
+          <div>{educations[key].field}</div>
+          <div>{educations[key].location.city}, {educations[key].location.country}</div>
+        </div>
+      </div>
+    )
   }
 
   render() {
@@ -14,10 +44,7 @@ export default class Education extends Component {
       <div className="component-container">
         <div className="component-title">Education</div>
         <div className="component-content">
-          <div>{this.state.education[0].school}</div>
-          <div>{this.state.education[0].degree}</div>
-          <div>{this.state.education[0].field}</div>
-          <div>{this.state.education[0].location.city}, {this.state.education[0].location.country}</div>
+          {_.keys(this.state.educations).map(this.renderEducation)}
         </div>
       </div>
     );
