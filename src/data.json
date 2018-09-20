@@ -1,25 +1,25 @@
 {
     "name": "Makrand Gupta",
-    "contact": [
-        {
+    "contacts": {
+        "contact1": {
             "type": "email",
             "value": "makrand1996@gmail.com"
         },
-        {
+        "contact2": {
             "type": "phone",
-            "value": 6478889999
+            "value": "6478889999"
         },
-        {
+        "contact3": {
             "type": "github",
             "value": "makrandgupta"
         },
-        {
+        "contact4": {
             "type": "linkedIn",
             "value": "makrandgupta"
         }
-    ],
-    "education": [
-        {
+    },
+    "educations": {
+        "ed1": {
             "degree": "Bachelors of Science",
             "field": "Computer Science, Statistics",
             "school": "University of Toronto",
@@ -28,9 +28,9 @@
                 "country": "Canada"
             }
         }
-    ],
-    "experience": [
-        {
+    },
+    "experiences": {
+        "exp1": {
             "title": "CTO",
             "company": "SwiftSeat",
             "from": {
@@ -44,7 +44,7 @@
                 "country": "Canada"
             }
         },
-        {
+        "exp2": {
             "title": "Software Developer",
             "company": "Connected",
             "from": {
@@ -61,7 +61,7 @@
                 "country": "Canada"
             }
         },
-        {
+        "exp3": {
             "title": "Software Developer",
             "company": "Developers' Foundation",
             "from": {
@@ -78,9 +78,13 @@
                 "country": "Canada"
             }
         }
-    ],
-    "skills": [
-        "ReactJS",
-        "AngularJS"
-    ]
+    },
+    "skills": {
+        "skill1": {
+            "name": "ReactJS"
+        },
+        "skill2": {
+            "name": "AngluarJS"
+        }
+    }
 }
