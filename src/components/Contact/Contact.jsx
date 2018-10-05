@@ -1,11 +1,9 @@
 import _ from 'lodash';
 import './Contact.css';
 import React from 'react';
-import ReactModal from 'react-modal';
 
 import AddButton from '../Buttons/AddButton/AddButton';
 import AddContactForm from '../AddContactForm';
-import CloseButton from '../Buttons/CloseButton/CloseButton';
 
 import base from '../../services/base';
 
@@ -13,8 +11,8 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false,
-      contacts: {}
+      showAddContactForm: false,
+      contacts: {},
     };
   }
 
@@ -34,23 +32,25 @@ class Contact extends React.Component {
     const contacts = this.state.contacts;
     contacts[`contact${Date.now()}`] = { type, value };
     this.setState({ contacts });
+    this.handleCloseAddContactForm();
   };
 
-  // START: Modal handlers
+  // START: Form display handlers
 
-  handleOpenModal = () => {
+  handleOpenAddContactForm = () => {
+    console.log('open add contact form called')
     this.setState({
-      showModal: true
+      showAddContactForm: true
     });
   }
 
-  handleCloseModal = () => {
+  handleCloseAddContactForm = () => {
     this.setState({
-      showModal: false
+      showAddContactForm: false
     });
   }
 
-  // END: Modal handlers
+  // END: Form display handlers
 
   renderContact = (key) => {
     const contact = this.state.contacts[key];
@@ -68,19 +68,13 @@ class Contact extends React.Component {
       <div className="component-container">
         <div className="component-title">
           Contact
-          <AddButton onClick={this.handleOpenModal} />
+          <AddButton onClick={this.handleOpenAddContactForm} />
         </div>
+        {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
         <div className="component-content flex horizontal wrap space-evenly">
           {_.keys(this.state.contacts).map(this.renderContact)}
         </div>
 
-        <ReactModal
-          isOpen={this.state.showModal}
-          onRequestClose={this.handleCloseModal}
-        >
-          <AddContactForm addContact={this.addContact} />
-          <CloseButton onClick={this.handleCloseModal} />
-        </ReactModal>
       </div>
     );
   }
