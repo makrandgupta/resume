@@ -1,3 +1,12 @@
 h3.ui.header {
     text-transform: capitalize; 
 }
+
+.ui.borderless.menu .item {
+    padding: .1em .3em;
+}
+
+.ui.borderless.menu {
+    border: none;
+    box-shadow: none;
+}

@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import './Contact.css';
 import React from 'react';
-import { Container, Header, Segment } from 'semantic-ui-react';
+import { Container, Header, Segment, Menu } from 'semantic-ui-react';
 
-import AddButton from '../Buttons/AddButton/AddButton';
+import AddButton from '../Buttons/AddButton';
+import CloseButton from '../Buttons/CloseButton';
 import AddContactForm from '../AddContactForm';
 
 import base from '../../services/base';
@@ -67,10 +68,19 @@ class Contact extends React.Component {
   render() {
     return (
       <Container>
-        <Header as="h2" textAlign="left">
-          Contact
-          <AddButton onClick={this.handleOpenAddContactForm} />
-        </Header>
+        <Menu borderless>
+          <Menu.Item>
+            <Header as="h2" textAlign="left">Contact</Header>
+          </Menu.Item>
+
+          <Menu.Item>
+            <AddButton onClick={this.handleOpenAddContactForm} />
+          </Menu.Item>
+
+          <Menu.Item>
+            <CloseButton onClick={this.handleCloseAddContactForm} />
+          </Menu.Item>
+        </Menu>
         {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
         <Segment.Group horizontal>
           {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
