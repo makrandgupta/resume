@@ -100,7 +100,7 @@ class AddEducationForm extends React.Component {
               </Form.Field>
             </Form.Group>
           </Form.Group>
-          <Form.Button type='submit'>Add Contact</Form.Button>
+          <Form.Button type='submit'>Add Education</Form.Button>
         </Form>
       </Segment>
     )
