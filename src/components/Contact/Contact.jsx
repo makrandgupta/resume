@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import './Contact.css';
 import React from 'react';
+import { Container, Header, Segment } from 'semantic-ui-react';
+import SectionHeader from '../SectionHeader';
 
-import AddButton from '../Buttons/AddButton/AddButton';
 import AddContactForm from '../AddContactForm';
 
 import base from '../../services/base';
@@ -56,26 +57,28 @@ class Contact extends React.Component {
     const contact = this.state.contacts[key];
 
     return (
-      <div className="contact-container" key={key}>
-        <div className="contact-header">{contact.type}</div>
+      <Segment key={key}>
+        <Header as="h3" textAlign="left">{contact.type}</Header>
         <div className="contact-data">{contact.value}</div>
-      </div>
+      </Segment>
     )
   }
 
   render() {
     return (
-      <div className="component-container">
-        <div className="component-title">
-          Contact
-          <AddButton onClick={this.handleOpenAddContactForm} />
-        </div>
-        {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
-        <div className="component-content flex horizontal wrap space-evenly">
-          {_.keys(this.state.contacts).map(this.renderContact)}
-        </div>
+      <Container>
+        <SectionHeader
+          sectionName="Contact"
+          openAddForm={this.handleOpenAddContactForm}
+          closeAddForm={this.handleCloseAddContactForm}
+        />
 
-      </div>
+        {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
+        <Segment.Group horizontal>
+          {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
+          {_.keys(this.state.contacts).map(this.renderContact)}
+        </Segment.Group>
+      </Container>
     );
   }
 }

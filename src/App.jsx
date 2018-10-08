@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import { Container, Header, Divider } from 'semantic-ui-react';
 import Contact from './components/Contact/Contact';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
@@ -29,13 +30,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
-        <div className="app-title">{this.state.name}</div>
+      <Container style={{ marginTop: '4em' }} text>
+        <Header as="h1" textAlign="center">{this.state.name}</Header>
         <Contact />
+        <Divider hidden/>
         <Experience />
+        <Divider hidden/>
         <Skills />
+        <Divider hidden/>
         <Education />
-      </div>
+      </Container>
     );
   }
 }

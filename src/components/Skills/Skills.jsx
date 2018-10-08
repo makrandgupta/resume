@@ -1,9 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
+import { Container, Header, List, Segment } from 'semantic-ui-react';
+import SectionHeader from '../SectionHeader';
+
+import AddSkillForm from '../AddSkillForm';
 
 import base from '../../services/base';
 
-export default class Skills extends React.Component {
+
+class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,19 +31,26 @@ export default class Skills extends React.Component {
     const skill = this.state.skills[key];
 
     return (
-      <li key={key}>{skill.name}</li>
+      <List.Item key={key}>{skill.name}</List.Item>
     )
   }
   render() {
     return (
-      <div className="component-container">
-        <div className="component-title">Skills</div>
-        <div className="component-content">
-          <ul>
+      <Container>
+         <SectionHeader
+          sectionName="Skill"
+          openAddForm={this.handleOpenAddSkillForm}
+          closeAddForm={this.handleCloseAddSkillForm}
+        />
+        {this.state.showAddSkillForm && <AddSkillForm addSkill={this.addSkill} />}
+        <Segment>
+          <List>
             {_.keys(this.state.skills).map(this.renderSkill)}
-          </ul>
-        </div>
-      </div>
+          </List>
+        </Segment>
+      </Container>
     );
   }
 }
+
+export default Skills;
