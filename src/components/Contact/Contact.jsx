@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './Contact.css';
 import React from 'react';
+import { Container, Header, Segment } from 'semantic-ui-react';
 
 import AddButton from '../Buttons/AddButton/AddButton';
 import AddContactForm from '../AddContactForm';
@@ -56,26 +57,26 @@ class Contact extends React.Component {
     const contact = this.state.contacts[key];
 
     return (
-      <div className="contact-container" key={key}>
-        <div className="contact-header">{contact.type}</div>
+      <Segment key={key}>
+        <Header as="h3" textAlign="left">{contact.type}</Header>
         <div className="contact-data">{contact.value}</div>
-      </div>
+      </Segment>
     )
   }
 
   render() {
     return (
-      <div className="component-container">
-        <div className="component-title">
+      <Container>
+        <Header as="h2" textAlign="left">
           Contact
           <AddButton onClick={this.handleOpenAddContactForm} />
-        </div>
+        </Header>
         {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
-        <div className="component-content flex horizontal wrap space-evenly">
+        <Segment.Group horizontal>
+          {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
           {_.keys(this.state.contacts).map(this.renderContact)}
-        </div>
-
-      </div>
+        </Segment.Group>
+      </Container>
     );
   }
 }
