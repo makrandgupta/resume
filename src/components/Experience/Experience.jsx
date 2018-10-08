@@ -2,8 +2,8 @@ import _ from 'lodash';
 
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
+import SectionHeader from '../SectionHeader';
 
-import AddButton from '../Buttons/AddButton/AddButton';
 import AddExperienceForm from '../AddExperienceForm';
 
 import base from '../../services/base';
@@ -32,12 +32,12 @@ class Experience extends React.Component {
     const experience = this.state.experiences[key];
 
     return (
-      <div>
-        <Header as="h3" attached="top" textAlign="left">
-          {experience.title} - {experience.company}
-          <Header.Subheader>{experience.location.city}, {experience.location.country}</Header.Subheader>
-        </Header>
-        <Segment attached>
+      <div key={key}>
+        <Segment>
+          <Header as="h3" textAlign="left">
+            {experience.title} - {experience.company}
+            <Header.Subheader>{experience.location.city}, {experience.location.country}</Header.Subheader>
+          </Header>
           <div dangerouslySetInnerHTML={{ __html: experience.description }} />
         </Segment>
       </div>
@@ -48,12 +48,13 @@ class Experience extends React.Component {
     return (
 
       <Container>
-        <Header as="h2" textAlign="left">
-          Experience
-          <AddButton onClick={this.handleOpenAddExperienceForm} />
-        </Header>
+        <SectionHeader
+          sectionName="Experience"
+          openAddForm={this.handleOpenAddExperienceForm}
+          closeAddForm={this.handleCloseAddExperienceForm}
+        />
         {this.state.showAddExperienceForm && <AddExperienceForm addExperience={this.addExperience} />}
-        <Segment.Group vertical>
+        <Segment.Group>
           {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
           {_.keys(this.state.experiences).map(this.renderExperience)}
         </Segment.Group>
