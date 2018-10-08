@@ -2,10 +2,12 @@ import _ from 'lodash';
 
 import React from 'react';
 
-import AddButton from '../Buttons/AddButton/AddButton';
+import SectionHeader from '../SectionHeader';
+
 import AddEducationForm from '../AddEducationForm';
 
 import base from '../../services/base';
+import { Container, Segment, Header } from 'semantic-ui-react';
 
 export default class Education extends React.Component {
   constructor(props) {
@@ -54,30 +56,32 @@ export default class Education extends React.Component {
     const { educations } = this.state;
 
     return (
-      <div className="contact-container" key={key}>
-        <div className="contact-header">{_.get(educations, `${key}.type`)}</div>
-        <div className="contact-data">
-          <div>{_.get(educations, `${key}.school`)}</div>
-          <div>{_.get(educations, `${key}.degree`)}</div>
-          <div>{_.get(educations, `${key}.field`)}</div>
-          <div>{_.get(educations, `${key}.location.city`)}, {_.get(educations, `${key}.location.country`)}</div>
-        </div>
-      </div>
+      <Segment key={key}>
+        <Header as="h3" textAlign="left">
+          {_.get(educations, `${key}.field`)}
+          <Header.Subheader>
+            {_.get(educations, `${key}.location.city`)}, {_.get(educations, `${key}.location.country`)}
+          </Header.Subheader>
+        </Header>
+        <div>{_.get(educations, `${key}.degree`)}</div>
+        <div>{_.get(educations, `${key}.school`)}</div>
+      </Segment>
     )
   }
 
   render() {
     return (
-      <div className="component-container">
-        <div className="component-title">
-          Education
-          <AddButton onClick={this.handleOpenAddEducationForm} />
-        </div>
+      <Container>
+        <SectionHeader
+          sectionName="Education"
+          openAddForm={this.handleOpenAddEducationForm}
+          closeAddForm={this.handleCloseAddEducationForm}
+        />
         {this.state.showAddEducationForm && <AddEducationForm addEducation={this.addEducation} />}
-        <div className="component-content">
+        <Segment.Group>
           {_.keys(this.state.educations).map(this.renderEducation)}
-        </div>
-      </div>
+        </Segment.Group>
+      </Container>
     );
   }
 }
