@@ -32,15 +32,13 @@ class Experience extends React.Component {
     const experience = this.state.experiences[key];
 
     return (
-      <div key={key}>
-        <Segment>
-          <Header as="h3" textAlign="left">
-            {experience.title} - {experience.company}
-            <Header.Subheader>{experience.location.city}, {experience.location.country}</Header.Subheader>
-          </Header>
-          <div dangerouslySetInnerHTML={{ __html: experience.description }} />
-        </Segment>
-      </div>
+      <Segment key={key}>
+        <Header as="h3" textAlign="left">
+          {experience.title} - {experience.company}
+          <Header.Subheader>{experience.location.city}, {experience.location.country}</Header.Subheader>
+        </Header>
+        <div dangerouslySetInnerHTML={{ __html: experience.description }} />
+      </Segment>
     )
   }
 
