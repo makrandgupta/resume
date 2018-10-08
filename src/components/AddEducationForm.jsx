@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Segment } from 'semantic-ui-react';
 
 class AddEducationForm extends React.Component {
   constructor(props) {
@@ -7,24 +8,12 @@ class AddEducationForm extends React.Component {
       degree: '',
       field: '',
       school: '',
-      location: {
-        city: '',
-        country: '',
-      },
+      city: '',
+      country: '',
     };
   }
 
   handleFormChange = (e) => {
-    console.log('got target', e.target.name)
-    if (e.target.name.includes('location')) {
-      const targetName = e.target.name.replace('location.', '');
-      console.log('setting', targetName);
-      return this.setState({
-        location: {
-          [targetName]: e.target.value
-        }
-      })
-    }
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -32,64 +21,88 @@ class AddEducationForm extends React.Component {
 
   handleFormSubmit = (e) => {
     e.preventDefault();
-    const { degree, field, school, location } = this.state;
+    const { degree, field, school, city, country } = this.state;
     this.props.addEducation({
       degree,
       field,
       school,
-      location,
+      location: {
+        city, 
+        country,
+      },
     });
     this.setState({
       degree: '',
       field: '',
       school: '',
-      location: {
-        city: '',
-        country: '',
-      },
+      city: '',
+      country: '',
     });
   }
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <input
-          type="text"
-          name="degree"
-          onChange={this.handleFormChange}
-          placeholder="What degree did you get?"
-          value={this.state.degree}
-        />
-        <input
-          type="text"
-          name="field"
-          onChange={this.handleFormChange}
-          placeholder="In what field did you get the degree?"
-          value={this.state.field}
-        />
-        <input
-          type="text"
-          name="school"
-          onChange={this.handleFormChange}
-          placeholder="In what school did you get the degree?"
-          value={this.state.school}
-        />
-        <input
-          type="text"
-          name="location.city"
-          onChange={this.handleFormChange}
-          placeholder="In what city did you get the degree?"
-          value={this.state.location.city}
-        />
-        <input
-          type="text"
-          name="location.country"
-          onChange={this.handleFormChange}
-          placeholder="In what country did you get the degree?"
-          value={this.state.location.country}
-        />
-        <button>Add Contact</button>
-      </form>
+      <Segment inverted>
+        <Form onSubmit={this.handleFormSubmit} inverted>
+          <Form.Group widths="equal">
+            <Form.Field>
+              <label>Degree</label>
+              <input
+                type="text"
+                name="degree"
+                onChange={this.handleFormChange}
+                placeholder="Degree"
+                value={this.state.degree}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Field</label>
+              <input
+                type="text"
+                name="field"
+                onChange={this.handleFormChange}
+                placeholder="Field"
+                value={this.state.field}
+              />
+            </Form.Field>
+          </Form.Group>
+          <Form.Group widths={2}>
+            <Form.Field>
+              <label>School</label>
+              <input
+                type="text"
+                name="school"
+                onChange={this.handleFormChange}
+                placeholder="School"
+                value={this.state.school}
+              />
+            </Form.Field>
+            <Form.Group widths={2}>
+              <Form.Field>
+                <label>City</label>
+                <input
+                  type="text"
+                  name="city"
+                  onChange={this.handleFormChange}
+                  placeholder="City"
+                  value={this.state.city}
+                />
+              </Form.Field>
+              <Form.Field>
+                <label>Country</label>
+                <input
+                  type="text"
+                  name="country"
+                  onChange={this.handleFormChange}
+                  placeholder="Country"
+                  value={this.state.country}
+                />
+              </Form.Field>
+            </Form.Group>
+          </Form.Group>
+          <Form.Button type='submit'>Add Education</Form.Button>
+        </Form>
+      </Segment>
     )
   }
 }

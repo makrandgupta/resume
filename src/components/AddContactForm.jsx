@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Segment } from 'semantic-ui-react';
 
 class AddContactForm extends React.Component {
   constructor(props) {
@@ -24,23 +25,32 @@ class AddContactForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <input
-          type="text"
-          name="newType"
-          onChange={this.handleFormChange}
-          placeholder="What's the type of contact?"
-          value={this.state.newType}
-        />
-        <input
-          type="text"
-          name="newValue"
-          onChange={this.handleFormChange}
-          placeholder="What's the contact info?"
-          value={this.state.newValue}
-        />
-        <button>Add Contact</button>
-      </form>
+      <Segment inverted>
+        <Form onSubmit={this.handleFormSubmit} inverted>
+          <Form.Group widths="equal">
+            <Form.Field>
+              <label>Contact Type</label>
+              <input
+                name="newType"
+                onChange={this.handleFormChange}
+                placeholder="Contact Type"
+                value={this.state.newType}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Contact Value</label>
+              <input
+                type="text"
+                name="newValue"
+                onChange={this.handleFormChange}
+                placeholder="Contact Info"
+                value={this.state.newValue}
+              />
+            </Form.Field>
+          </Form.Group>
+            <Form.Button type='submit'>Add Contact</Form.Button>
+        </Form>
+      </Segment>
     )
   }
 }
