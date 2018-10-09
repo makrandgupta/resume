@@ -3,18 +3,18 @@ import { Header, Menu } from 'semantic-ui-react';
 import AddButton from './Buttons/AddButton';
 import CloseButton from './Buttons/CloseButton';
 
-const SectionHeader = (props) => (
+const SectionHeader = ({ sectionName, openAddForm, closeAddForm}) => (
   <Menu borderless>
     <Menu.Item>
-      <Header as="h2" textAlign="left">{props.sectionName}</Header>
+      <Header as="h2" textAlign="left">{sectionName}</Header>
     </Menu.Item>
 
     <Menu.Item>
-      <AddButton onClick={props.openAddForm} />
+      <AddButton onClick={openAddForm} />
     </Menu.Item>
 
     <Menu.Item>
-      <CloseButton onClick={props.closeAddForm} />
+      <CloseButton onClick={closeAddForm} />
     </Menu.Item>
   </Menu>
 );
