@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { Container, Header, List, Segment } from 'semantic-ui-react';
+import { Container, List, Segment } from 'semantic-ui-react';
 import SectionHeader from '../SectionHeader';
 
 import AddSkillForm from '../AddSkillForm';
