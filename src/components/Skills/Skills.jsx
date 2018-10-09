@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
-import SectionHeader from '../SectionHeader';
-
-import AddSkillForm from '../AddSkillForm';
-
 import base from '../../services/base';
-
+import AddSkillForm from '../AddSkillForm';
+import SectionHeader from '../SectionHeader';
 
 class Skills extends React.Component {
   constructor(props) {

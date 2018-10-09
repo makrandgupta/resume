@@ -1,12 +1,9 @@
 import _ from 'lodash';
-
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
-import SectionHeader from '../SectionHeader';
-
-import AddExperienceForm from '../AddExperienceForm';
-
 import base from '../../services/base';
+import AddExperienceForm from '../AddExperienceForm';
+import SectionHeader from '../SectionHeader';
 
 class Experience extends React.Component {
   constructor(props) {

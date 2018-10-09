@@ -1,12 +1,10 @@
 import _ from 'lodash';
-import './Contact.css';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
-import SectionHeader from '../SectionHeader';
-
-import AddContactForm from '../AddContactForm';
-
 import base from '../../services/base';
+import AddContactForm from '../AddContactForm';
+import SectionHeader from '../SectionHeader';
+import './Contact.css';
 
 class Contact extends React.Component {
   constructor(props) {

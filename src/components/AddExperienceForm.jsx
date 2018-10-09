@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { Form, Segment, TextArea, Dropdown } from 'semantic-ui-react';
+import { Dropdown, Form, Segment, TextArea } from 'semantic-ui-react';
 
 const MONTHS = [
   { text: 'January', value: 1 },

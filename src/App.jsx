@@ -1,13 +1,10 @@
 import React from 'react';
-// import './App.css';
-import { Container, Header, Divider } from 'semantic-ui-react';
+import { Container, Divider, Header } from 'semantic-ui-react';
 import Contact from './components/Contact/Contact';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Skills from './components/Skills/Skills';
-
 import base from './services/base';
-
 
 class App extends React.Component {
   constructor(props) {

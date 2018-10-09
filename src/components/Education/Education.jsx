@@ -1,13 +1,9 @@
 import _ from 'lodash';
-
 import React from 'react';
-
-import SectionHeader from '../SectionHeader';
-
-import AddEducationForm from '../AddEducationForm';
-
+import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import { Container, Segment, Header } from 'semantic-ui-react';
+import AddEducationForm from '../AddEducationForm';
+import SectionHeader from '../SectionHeader';
 
 export default class Education extends React.Component {
   constructor(props) {

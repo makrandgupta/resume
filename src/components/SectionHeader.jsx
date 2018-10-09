@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header, Menu } from 'semantic-ui-react';
-
 import AddButton from './Buttons/AddButton';
 import CloseButton from './Buttons/CloseButton';
 
