@@ -39,7 +39,6 @@ class Contact extends React.Component {
   // START: Form display handlers
 
   handleOpenAddContactForm = () => {
-    console.log('open add contact form called')
     this.setState({
       showAddContactForm: true
     });
