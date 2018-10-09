@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container style={{ marginTop: '4em' }} text>
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }} text>
         <Header as="h1" textAlign="center">{this.state.name}</Header>
         <Contact />
         <Divider hidden/>
