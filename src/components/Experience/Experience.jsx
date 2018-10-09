@@ -69,6 +69,7 @@ class Experience extends React.Component {
           sectionName="Experience"
           openAddForm={this.handleOpenAddExperienceForm}
           closeAddForm={this.handleCloseAddExperienceForm}
+          isFormOpen={this.state.showAddExperienceForm}
         />
         {this.state.showAddExperienceForm && <AddExperienceForm addExperience={this.addExperience} />}
         <Segment.Group>

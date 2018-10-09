@@ -71,6 +71,7 @@ export default class Education extends React.Component {
           sectionName="Education"
           openAddForm={this.handleOpenAddEducationForm}
           closeAddForm={this.handleCloseAddEducationForm}
+          isFormOpen={this.state.showAddEducationForm}
         />
         {this.state.showAddEducationForm && <AddEducationForm addEducation={this.addEducation} />}
         <Segment.Group>

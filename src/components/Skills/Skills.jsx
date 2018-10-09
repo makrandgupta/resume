@@ -61,6 +61,7 @@ class Skills extends React.Component {
           sectionName="Skills"
           openAddForm={this.handleOpenAddSkillForm}
           closeAddForm={this.handleCloseAddSkillForm}
+          isFormOpen={this.state.showAddSkillForm}
         />
         {this.state.showAddSkillForm && <AddSkillForm addSkill={this.addSkill} />}
         <Segment>

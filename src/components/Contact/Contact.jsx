@@ -68,6 +68,7 @@ class Contact extends React.Component {
           sectionName="Contact"
           openAddForm={this.handleOpenAddContactForm}
           closeAddForm={this.handleCloseAddContactForm}
+          isFormOpen={this.state.showAddContactForm}
         />
 
         {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
