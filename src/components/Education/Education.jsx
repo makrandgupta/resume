@@ -31,7 +31,6 @@ export default class Education extends React.Component {
 
   addEducation = (education) => {
     const educations = this.state.educations;
-    console.log('got edu', education);
     educations[`edu${Date.now()}`] = education;
     this.setState({ educations });
   };

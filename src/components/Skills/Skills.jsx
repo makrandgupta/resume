@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { Container, Header, List, Segment } from 'semantic-ui-react';
+import { Container, List, Segment } from 'semantic-ui-react';
 import SectionHeader from '../SectionHeader';
 
 import AddSkillForm from '../AddSkillForm';
@@ -12,6 +12,7 @@ class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showAddSkillForm: false,
       skills: {},
     };
   }
@@ -27,6 +28,28 @@ class Skills extends React.Component {
     base.removeBinding(this.ref);
   }
 
+  addSkill = (skill) => {
+    const skills = this.state.skills;
+    skills[`skill${Date.now()}`] = skill;
+    this.setState({ skills });
+  };
+
+  // START: Display AddSkillForm handlers
+
+  handleOpenAddSkillForm = () => {
+    this.setState({
+      showAddSkillForm: true
+    });
+  }
+
+  handleCloseAddSkillForm = () => {
+    this.setState({
+      showAddSkillForm: false
+    });
+  }
+
+  // END: Display AddSkillForm handlers
+
   renderSkill = (key) => {
     const skill = this.state.skills[key];
 
@@ -38,7 +61,7 @@ class Skills extends React.Component {
     return (
       <Container>
          <SectionHeader
-          sectionName="Skill"
+          sectionName="Skills"
           openAddForm={this.handleOpenAddSkillForm}
           closeAddForm={this.handleCloseAddSkillForm}
         />

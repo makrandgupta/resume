@@ -28,6 +28,28 @@ class Experience extends React.Component {
     base.removeBinding(this.ref);
   }
 
+  addExperience = (experience) => {
+    const experiences = this.state.experiences;
+    experiences[`exp${Date.now()}`] = experience;
+    this.setState({ experiences });
+  };
+
+  // START: Display AddExperienceForm handlers
+
+  handleOpenAddExperienceForm = () => {
+    this.setState({
+      showAddExperienceForm: true
+    });
+  }
+
+  handleCloseAddExperienceForm = () => {
+    this.setState({
+      showAddExperienceForm: false
+    });
+  }
+
+  // END: Display AddExperienceForm handlers
+
   renderExperience = (key) => {
     const experience = this.state.experiences[key];
 
