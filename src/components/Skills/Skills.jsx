@@ -38,7 +38,7 @@ class Skills extends React.Component {
     return (
       <Container>
          <SectionHeader
-          sectionName="Skill"
+          sectionName="Skills"
           openAddForm={this.handleOpenAddSkillForm}
           closeAddForm={this.handleCloseAddSkillForm}
         />
