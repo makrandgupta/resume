@@ -29,21 +29,21 @@ class AddContactForm extends React.Component {
         <Form onSubmit={this.handleFormSubmit} inverted>
           <Form.Group widths="equal">
             <Form.Field>
-              <label>Contact Type</label>
+              <label>Type</label>
               <input
                 name="newType"
                 onChange={this.handleFormChange}
-                placeholder="Contact Type"
+                placeholder="e.g. Phone, Email, Skype, etc."
                 value={this.state.newType}
               />
             </Form.Field>
             <Form.Field>
-              <label>Contact Value</label>
+              <label>Value</label>
               <input
                 type="text"
                 name="newValue"
                 onChange={this.handleFormChange}
-                placeholder="Contact Info"
+                placeholder="Contact Value"
                 value={this.state.newValue}
               />
             </Form.Field>
