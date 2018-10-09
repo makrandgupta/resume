@@ -12,6 +12,7 @@ class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showAddSkillForm: false,
       skills: {},
     };
   }
@@ -26,6 +27,28 @@ class Skills extends React.Component {
   componentWillUnmount() {
     base.removeBinding(this.ref);
   }
+
+  addSkill = (skill) => {
+    const skills = this.state.skills;
+    skills[`skill${Date.now()}`] = skill;
+    this.setState({ skills });
+  };
+
+  // START: Display AddSkillForm handlers
+
+  handleOpenAddSkillForm = () => {
+    this.setState({
+      showAddSkillForm: true
+    });
+  }
+
+  handleCloseAddSkillForm = () => {
+    this.setState({
+      showAddSkillForm: false
+    });
+  }
+
+  // END: Display AddSkillForm handlers
 
   renderSkill = (key) => {
     const skill = this.state.skills[key];
