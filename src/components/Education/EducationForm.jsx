@@ -13,14 +13,14 @@ class AddEducationForm extends React.Component {
     };
   }
 
-  handleFormChange = (e) => {
+  handleFormChange = (event) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     });
   }
 
-  handleFormSubmit = (e) => {
-    e.preventDefault();
+  handleFormSubmit = (event) => {
+    event.preventDefault();
     const { degree, field, school, city, country } = this.state;
     this.props.addEducation({
       degree,

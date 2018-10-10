@@ -53,8 +53,8 @@ class AddExperienceForm extends React.Component {
     });
   }
 
-  handleFormSubmit = (e) => {
-    e.preventDefault();
+  handleFormSubmit = (event) => {
+    event.preventDefault();
     const { company, title, description, fromMonth, fromYear, currentPosition, toMonth, toYear, city, country } = this.state;
     this.props.addExperience({
       company,
