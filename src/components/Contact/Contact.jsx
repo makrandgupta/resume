@@ -26,9 +26,8 @@ class Contact extends React.Component {
     base.removeBinding(this.ref);
   }
 
-
-  addContact = (type, value) => {
-    const contacts = this.state.contacts;
+  handleAddContact = ({ type, value }) => {
+    const contacts = { ...this.state.contacts };
     contacts[`contact${Date.now()}`] = { type, value };
     this.setState({ contacts });
     this.handleCloseAddContactForm();
