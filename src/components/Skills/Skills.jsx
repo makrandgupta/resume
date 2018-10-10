@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import AddSkillForm from '../AddSkillForm';
+import SkillForm from './SkillForm';
 import SectionHeader from '../SectionHeader';
 
 class Skills extends React.Component {
@@ -63,7 +63,7 @@ class Skills extends React.Component {
           closeAddForm={this.handleCloseAddSkillForm}
           isFormOpen={this.state.showAddSkillForm}
         />
-        {this.state.showAddSkillForm && <AddSkillForm addSkill={this.addSkill} />}
+        {this.state.showAddSkillForm && <SkillForm addSkill={this.addSkill} />}
         <Segment>
           <List>
             {_.keys(this.state.skills).map(this.renderSkill)}

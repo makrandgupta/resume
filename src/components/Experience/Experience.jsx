@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import AddExperienceForm from '../AddExperienceForm';
+import ExperienceForm from './ExperienceForm';
 import SectionHeader from '../SectionHeader';
 
 class Experience extends React.Component {
@@ -31,7 +31,7 @@ class Experience extends React.Component {
     this.setState({ experiences });
   };
 
-  // START: Display AddExperienceForm handlers
+  // START: Display ExperienceForm handlers
 
   handleOpenAddExperienceForm = () => {
     this.setState({
@@ -45,7 +45,7 @@ class Experience extends React.Component {
     });
   }
 
-  // END: Display AddExperienceForm handlers
+  // END: Display ExperienceForm handlers
 
   renderExperience = (key) => {
     const experience = this.state.experiences[key];
@@ -71,7 +71,7 @@ class Experience extends React.Component {
           closeAddForm={this.handleCloseAddExperienceForm}
           isFormOpen={this.state.showAddExperienceForm}
         />
-        {this.state.showAddExperienceForm && <AddExperienceForm addExperience={this.addExperience} />}
+        {this.state.showAddExperienceForm && <ExperienceForm addExperience={this.addExperience} />}
         <Segment.Group>
           {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
           {_.keys(this.state.experiences).map(this.renderExperience)}

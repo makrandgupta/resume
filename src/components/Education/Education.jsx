@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import AddEducationForm from '../AddEducationForm';
+import EducationForm from './EducationForm';
 import SectionHeader from '../SectionHeader';
 
 export default class Education extends React.Component {
@@ -73,7 +73,7 @@ export default class Education extends React.Component {
           closeAddForm={this.handleCloseAddEducationForm}
           isFormOpen={this.state.showAddEducationForm}
         />
-        {this.state.showAddEducationForm && <AddEducationForm addEducation={this.addEducation} />}
+        {this.state.showAddEducationForm && <EducationForm addEducation={this.addEducation} />}
         <Segment.Group>
           {_.keys(this.state.educations).map(this.renderEducation)}
         </Segment.Group>
