@@ -27,7 +27,7 @@ for (let year = maxYear; year >= minYear; year--) {
   })
 }
 
-class AddExperienceForm extends React.Component {
+class ExperienceForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -210,4 +210,4 @@ class AddExperienceForm extends React.Component {
   }
 }
 
-export default AddExperienceForm;
+export default ExperienceForm;
