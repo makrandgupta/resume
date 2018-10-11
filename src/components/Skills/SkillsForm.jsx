@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Segment } from 'semantic-ui-react';
 
-class AddSkillForm extends React.Component {
+class AddSkillsForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,4 +44,4 @@ class AddSkillForm extends React.Component {
   }
 }
 
-export default AddSkillForm;
+export default AddSkillsForm;
