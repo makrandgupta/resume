@@ -18,7 +18,7 @@ class SkillsForm extends React.Component {
   handleFormSubmit = (e) => {
     e.preventDefault();
     const { skillName } = this.state;
-    this.props.addSkill({ name: skillName });
+    this.props.onAdd({ name: skillName });
     this.setState({
       skillName: '',
     });
@@ -37,7 +37,7 @@ class SkillsForm extends React.Component {
               value={this.state.skillName}
             />
           </Form.Field>
-          <Form.Button type='submit'>Add Skill</Form.Button>
+          {this.props.onAdd && <Form.Button type='submit'>Add Skill</Form.Button>}
         </Form>
       </Segment>
     )

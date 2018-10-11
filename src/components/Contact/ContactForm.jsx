@@ -5,10 +5,7 @@ import { Form, Segment } from 'semantic-ui-react';
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      type: _.get(this.props, 'contact.type', ''),
-      value: _.get(this.props, 'contact.value', ''),
-    };
+    this.state = { ...(_.get(this.props, 'data')) };
   }
 
   handleFormChange = (event, data) => {
@@ -27,14 +24,16 @@ class ContactForm extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const { type, value } = this.state;
-    this.props.addContact({
-      type: type,
-      value: value
-    });
-    this.setState({
-      type: '',
-      value: ''
-    });
+    if (this.props.onAdd) {
+      this.props.onAdd({
+        type,
+        value
+      });
+      this.setState({
+        type: '',
+        value: ''
+      });
+    }
   }
 
   render() {
@@ -62,7 +61,7 @@ class ContactForm extends React.Component {
               />
             </Form.Field>
           </Form.Group>
-          {this.props.addContact && <Form.Button basic inverted type='submit'>Add Contact</Form.Button>}
+          {this.props.onAdd && <Form.Button basic inverted type='submit'>Add Contact</Form.Button>}
         </Form>
       </Segment>
     )

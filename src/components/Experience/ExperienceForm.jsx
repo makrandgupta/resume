@@ -30,18 +30,7 @@ for (let year = maxYear; year >= minYear; year--) {
 class ExperienceForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      company: '',
-      title: '',
-      description: '',
-      fromMonth: '',
-      fromYear: '',
-      currentPosition: false,
-      toMonth: '',
-      toYear: '',
-      city: '',
-      country: '',
-    };
+    this.state = { ...(_.get(this.props, 'data')) };
   }
 
   handleFormChange = (event, data) => {
@@ -51,41 +40,40 @@ class ExperienceForm extends React.Component {
     this.setState({
       [src.name]: src.value
     });
+    if (this.props.onChange) {
+      this.props.onChange(event, data)
+    }
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
     const { company, title, description, fromMonth, fromYear, currentPosition, toMonth, toYear, city, country } = this.state;
-    this.props.addExperience({
-      company,
-      title,
-      description,
-      from: {
-        month: fromMonth,
-        year: fromYear,
-      },
-      currentPosition,
-      to: {
-        month: toMonth,
-        year: toYear,
-      },
-      location: {
+    if (this.props.onAdd) {
+      this.props.onAdd({
+        company,
+        title,
+        description,
+        fromMonth,
+        fromYear,
+        currentPosition,
+        toMonth,
+        toYear,
         city,
         country,
-      },
-    });
-    this.setState({
-      company: '',
-      title: '',
-      description: '',
-      fromMonth: '',
-      fromYear: '',
-      currentPosition: false,
-      toMonth: '',
-      toYear: '',
-      city: '',
-      country: '',
-    });
+      });
+      this.setState({
+        company: '',
+        title: '',
+        description: '',
+        fromMonth: '',
+        fromYear: '',
+        currentPosition: false,
+        toMonth: '',
+        toYear: '',
+        city: '',
+        country: '',
+      });
+    }
   }
 
   render() {
@@ -203,7 +191,7 @@ class ExperienceForm extends React.Component {
               />
             </Form.Field>
           </Form.Group>
-          <Form.Button type='submit'>Add Experience</Form.Button>
+          {this.props.onAdd && <Form.Button type='submit'>Add Experience</Form.Button>}
         </Form>
       </Segment>
     )
