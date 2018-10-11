@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import SkillForm from './SkillForm';
+import SkillsForm from './SkillsForm';
 import SectionHeader from '../SectionHeader';
 
 class Skills extends React.Component {
@@ -25,7 +25,7 @@ class Skills extends React.Component {
     base.removeBinding(this.ref);
   }
 
-  addSkill = (skill) => {
+  handleAddSkill = (skill) => {
     const skills = this.state.skills;
     skills[`skill${Date.now()}`] = skill;
     this.setState({ skills });
@@ -63,7 +63,7 @@ class Skills extends React.Component {
           closeAddForm={this.handleCloseAddSkillForm}
           isFormOpen={this.state.showAddSkillForm}
         />
-        {this.state.showAddSkillForm && <SkillForm addSkill={this.addSkill} />}
+        {this.state.showAddSkillForm && <SkillsForm onAdd={this.handleAddSkill} />}
         <Segment>
           <List>
             {_.keys(this.state.skills).map(this.renderSkill)}
