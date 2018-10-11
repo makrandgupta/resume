@@ -1,4 +1,4 @@
-h3.ui.header {
+h3.ui.header, .modal .header {
     text-transform: capitalize; 
 }
 
@@ -15,7 +15,9 @@ h3.header button.circular.icon {
     font-size: 0.75em;
     position: absolute;
     right: 0;
-    padding: 7px !important;
+    top: 0;
+    padding: 0.5rem !important;
+    margin: 0.5rem !important;
 }
 
 .modal .actions button.negative.left {
