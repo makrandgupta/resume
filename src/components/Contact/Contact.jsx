@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
 import EditButton from '../Buttons/EditButton';
-import EditContactModal from './EditContactModal';
+import EditModal from '../EditModal';
 import SectionHeader from '../SectionHeader';
 import './Contact.css';
 import ContactForm from './ContactForm';
@@ -105,15 +105,15 @@ class Contact extends React.Component {
           isFormOpen={this.state.showAddContactForm}
         />
 
-        {this.state.showAddContactForm && <ContactForm addContact={this.handleAddContact} inverted />}
+        {this.state.showAddContactForm && <ContactForm onAdd={this.handleAddContact} inverted />}
         <Segment.Group horizontal>
           {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
           {_.keys(this.state.contacts).map(this.renderContact)}
         </Segment.Group>
 
-        <EditContactModal
-          header="Edit Contact"
-          contact={this.state.contactToEdit}
+        <EditModal
+          section="contact"
+          data={this.state.contactToEdit}
           open={this.state.showEditContactModal}
           onClose={this.handleCloseEditContact}
           onDelete={this.handleDeleteContact}
