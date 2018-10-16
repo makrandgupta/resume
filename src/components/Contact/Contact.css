@@ -20,6 +20,11 @@ h3.header button.circular.icon {
     margin: 0.5rem !important;
 }
 
+.list .item button.circular.icon {
+    font-size: 0.75em;
+    padding: 0.5rem !important;
+}
+
 .modal .actions button.negative.left {
     position: absolute !important;
     left: 0.5em;

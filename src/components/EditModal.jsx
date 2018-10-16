@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 import ContactForm from './Contact/ContactForm';
 import ExperienceForm from './Experience/ExperienceForm';
-import SkillsForm from './Skills/SkillsForm';
+import SkillForm from './Skill/SkillForm';
 import EducationForm from './Education/EducationForm';
 
 class EditModal extends React.Component {
@@ -15,7 +15,7 @@ class EditModal extends React.Component {
   forms = {
     contact: ContactForm,
     experience: ExperienceForm,
-    skills: SkillsForm,
+    skill: SkillForm,
     education: EducationForm,
   }
 
