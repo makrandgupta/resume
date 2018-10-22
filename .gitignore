@@ -20,5 +20,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# VS Code config files
+/.vscode
+
 # Ignore firebase config keys
 **/firebase-config.json
