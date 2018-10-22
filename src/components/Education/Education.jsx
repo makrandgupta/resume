@@ -37,7 +37,6 @@ export default class Education extends React.Component {
   };
 
   handleSaveEducation = (education) => {
-    console.log('save ed called', education)
     const educations = { ...this.state.educations };
     educations[education.key] = _.pickBy(education, (value, key) => key !== 'key');
     this.setState({ educations });

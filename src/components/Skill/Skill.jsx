@@ -36,7 +36,6 @@ class Skill extends React.Component {
 
   handleSaveSkill = (skill) => {
     const skills = { ...this.state.skills };
-    console.log('saving skill', skill)
     skills[skill.key] = _.pickBy(skill, (value, key) => key !== 'key');
     this.setState({ skills });
   }
