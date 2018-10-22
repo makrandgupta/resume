@@ -1,43 +1,45 @@
+import _ from 'lodash';
 import React from 'react';
 import { Form, Segment } from 'semantic-ui-react';
 
-class AddEducationForm extends React.Component {
+class EducationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      degree: '',
-      field: '',
-      school: '',
-      city: '',
-      country: '',
-    };
+    this.state = { ...(_.get(this.props, 'data')) };
   }
 
-  handleFormChange = (e) => {
+  handleFormChange = (event, data) => {
+    const src = _.isEmpty(data) ? event.target : data;
+    // Checkbox component uses 'checked' instead of 'value' to store the current state
+    src.value = _.get(src, 'type') === 'checkbox' ? src.checked : src.value;
     this.setState({
-      [e.target.name]: e.target.value
+      [src.name]: src.value
     });
+    if (this.props.onChange) {
+      this.props.onChange(event, data)
+    }
   }
 
-  handleFormSubmit = (e) => {
-    e.preventDefault();
+
+  handleFormSubmit = (event) => {
+    event.preventDefault();
     const { degree, field, school, city, country } = this.state;
-    this.props.addEducation({
-      degree,
-      field,
-      school,
-      location: {
-        city, 
+    if (this.props.onAdd) {
+      this.props.onAdd({
+        degree,
+        field,
+        school,
+        city,
         country,
-      },
-    });
-    this.setState({
-      degree: '',
-      field: '',
-      school: '',
-      city: '',
-      country: '',
-    });
+      });
+      this.setState({
+        degree: '',
+        field: '',
+        school: '',
+        city: '',
+        country: '',
+      });
+    }
   }
 
   render() {
@@ -100,11 +102,11 @@ class AddEducationForm extends React.Component {
               </Form.Field>
             </Form.Group>
           </Form.Group>
-          <Form.Button type='submit'>Add Education</Form.Button>
+          {this.props.onAdd && <Form.Button type='submit'>Add Education</Form.Button>}
         </Form>
       </Segment>
     )
   }
 }
 
-export default AddEducationForm;
+export default EducationForm;

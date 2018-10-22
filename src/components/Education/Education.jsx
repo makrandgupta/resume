@@ -2,7 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import AddEducationForm from '../AddEducationForm';
+import EditButton from '../Buttons/EditButton';
+import EditModal from '../EditModal';
+import EducationForm from './EducationForm';
 import SectionHeader from '../SectionHeader';
 
 export default class Education extends React.Component {
@@ -10,6 +12,8 @@ export default class Education extends React.Component {
     super(props);
     this.state = {
       showAddEducationForm: false,
+      showEditEducationModal: false,
+      educationToEdit: {},
       educations: {},
     };
   }
@@ -25,11 +29,24 @@ export default class Education extends React.Component {
     base.removeBinding(this.ref);
   }
 
-  addEducation = (education) => {
+  handleAddEducation = (education) => {
     const educations = this.state.educations;
     educations[`edu${Date.now()}`] = education;
     this.setState({ educations });
+    this.handleCloseAddEducationForm();
   };
+
+  handleSaveEducation = (education) => {
+    const educations = { ...this.state.educations };
+    educations[education.key] = _.pickBy(education, (value, key) => key !== 'key');
+    this.setState({ educations });
+  }
+
+  handleDeleteEducation = (educationKey) => {
+    const educations = { ...this.state.educations };
+    educations[educationKey] = null;
+    this.setState({ educations });
+  }
 
   // START: Display AddEducationForm handlers
 
@@ -45,6 +62,22 @@ export default class Education extends React.Component {
     });
   }
 
+  handleOpenEditEducation = (educationKey) => {
+    this.setState({
+      showEditEducationModal: true,
+      educationToEdit: {
+        key: educationKey,
+        ...(this.state.educations[educationKey])
+      }
+    })
+  }
+
+  handleCloseEditEducation = () => {
+    this.setState({
+      showEditEducationModal: false
+    })
+  }
+
   // END: Display AddEducationForm handlers
 
   renderEducation = (key) => {
@@ -55,8 +88,9 @@ export default class Education extends React.Component {
         <Header as="h3" textAlign="left">
           {_.get(educations, `${key}.field`)}
           <Header.Subheader>
-            {_.get(educations, `${key}.location.city`)}, {_.get(educations, `${key}.location.country`)}
+            {_.get(educations, `${key}.city`)}, {_.get(educations, `${key}.country`)}
           </Header.Subheader>
+          <EditButton onClick={() => this.handleOpenEditEducation(key)} />
         </Header>
         <div>{_.get(educations, `${key}.degree`)}</div>
         <div>{_.get(educations, `${key}.school`)}</div>
@@ -71,11 +105,21 @@ export default class Education extends React.Component {
           sectionName="Education"
           openAddForm={this.handleOpenAddEducationForm}
           closeAddForm={this.handleCloseAddEducationForm}
+          isFormOpen={this.state.showAddEducationForm}
         />
-        {this.state.showAddEducationForm && <AddEducationForm addEducation={this.addEducation} />}
+        {this.state.showAddEducationForm && <EducationForm onAdd={this.handleAddEducation} />}
         <Segment.Group>
           {_.keys(this.state.educations).map(this.renderEducation)}
         </Segment.Group>
+
+        <EditModal
+          section="education"
+          data={this.state.educationToEdit}
+          open={this.state.showEditEducationModal}
+          onClose={this.handleCloseEditEducation}
+          onDelete={this.handleDeleteEducation}
+          onSave={this.handleSaveEducation}
+        />
       </Container>
     );
   }

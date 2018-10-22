@@ -2,15 +2,19 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
-import AddContactForm from '../AddContactForm';
+import EditButton from '../Buttons/EditButton';
+import EditModal from '../EditModal';
 import SectionHeader from '../SectionHeader';
 import './Contact.css';
+import ContactForm from './ContactForm';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showAddContactForm: false,
+      showEditContactModal: false,
+      contactToEdit: {},
       contacts: {},
     };
   }
@@ -26,13 +30,24 @@ class Contact extends React.Component {
     base.removeBinding(this.ref);
   }
 
-
-  addContact = (type, value) => {
-    const contacts = this.state.contacts;
+  handleAddContact = ({ type, value }) => {
+    const contacts = { ...this.state.contacts };
     contacts[`contact${Date.now()}`] = { type, value };
     this.setState({ contacts });
     this.handleCloseAddContactForm();
   };
+
+  handleSaveContact = ({ key, type, value }) => {
+    const contacts = { ...this.state.contacts };
+    contacts[key] = { type, value };
+    this.setState({ contacts });
+  }
+
+  handleDeleteContact = (contactKey) => {
+    const contacts = { ...this.state.contacts };
+    contacts[contactKey] = null;
+    this.setState({ contacts });
+  }
 
   // START: Form display handlers
 
@@ -48,6 +63,22 @@ class Contact extends React.Component {
     });
   }
 
+  handleOpenEditContact = (contactKey) => {
+    this.setState({
+      showEditContactModal: true,
+      contactToEdit: {
+        key: contactKey,
+        ...(this.state.contacts[contactKey])
+      }
+    })
+  }
+
+  handleCloseEditContact = () => {
+    this.setState({
+      showEditContactModal: false
+    })
+  }
+
   // END: Form display handlers
 
   renderContact = (key) => {
@@ -55,7 +86,10 @@ class Contact extends React.Component {
 
     return (
       <Segment key={key}>
-        <Header as="h3" textAlign="left">{contact.type}</Header>
+        <Header as="h3" textAlign="left">
+          {contact.type}
+          <EditButton onClick={() => this.handleOpenEditContact(key)} />
+        </Header>
         <div className="contact-data">{contact.value}</div>
       </Segment>
     )
@@ -68,13 +102,23 @@ class Contact extends React.Component {
           sectionName="Contact"
           openAddForm={this.handleOpenAddContactForm}
           closeAddForm={this.handleCloseAddContactForm}
+          isFormOpen={this.state.showAddContactForm}
         />
 
-        {this.state.showAddContactForm && <AddContactForm addContact={this.addContact} />}
+        {this.state.showAddContactForm && <ContactForm onAdd={this.handleAddContact} inverted />}
         <Segment.Group horizontal>
           {/* TODO: dynamically switch to vertical segment group based on content + screen size */}
           {_.keys(this.state.contacts).map(this.renderContact)}
         </Segment.Group>
+
+        <EditModal
+          section="contact"
+          data={this.state.contactToEdit}
+          open={this.state.showEditContactModal}
+          onClose={this.handleCloseEditContact}
+          onDelete={this.handleDeleteContact}
+          onSave={this.handleSaveContact}
+        />
       </Container>
     );
   }

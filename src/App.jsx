@@ -3,7 +3,7 @@ import { Container, Divider, Header } from 'semantic-ui-react';
 import Contact from './components/Contact/Contact';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
-import Skills from './components/Skills/Skills';
+import Skill from './components/Skill/Skill';
 import base from './services/base';
 
 class App extends React.Component {
@@ -33,7 +33,7 @@ class App extends React.Component {
         <Divider hidden/>
         <Experience />
         <Divider hidden/>
-        <Skills />
+        <Skill />
         <Divider hidden/>
         <Education />
       </Container>

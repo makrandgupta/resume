@@ -1,4 +1,4 @@
-h3.ui.header {
+h3.ui.header, .modal .header {
     text-transform: capitalize; 
 }
 
@@ -9,4 +9,23 @@ h3.ui.header {
 .ui.borderless.menu {
     border: none;
     box-shadow: none;
+}
+
+h3.header button.circular.icon {
+    font-size: 0.75em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5rem !important;
+    margin: 0.5rem !important;
+}
+
+.list .item button.circular.icon {
+    font-size: 0.75em;
+    padding: 0.5rem !important;
+}
+
+.modal .actions button.negative.left {
+    position: absolute !important;
+    left: 0.5em;
 }
