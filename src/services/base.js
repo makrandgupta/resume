@@ -6,5 +6,5 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const base = Rebase.createClass(firebaseApp.database());
 
-export { firebase }
+export { firebaseApp }
 export default base;
