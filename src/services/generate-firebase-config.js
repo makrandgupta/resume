@@ -1,5 +1,5 @@
-const fs = require('fs');
-const _ = require('lodash');
+import fs from 'fs';
+import _ from 'lodash';
 
 const config = {}
 config['apiKey'] = _.get(process, 'env.FIREBASE_API_KEY', '');
