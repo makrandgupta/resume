@@ -2,9 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 import ContactForm from './Contact/ContactForm';
-import ExperienceForm from './Experience/ExperienceForm';
-import SkillForm from './Skill/SkillForm';
 import EducationForm from './Education/EducationForm';
+import ExperienceForm from './Experience/ExperienceForm';
+import NameForm from './Name/NameForm';
+import SkillForm from './Skill/SkillForm';
 
 class EditModal extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class EditModal extends React.Component {
   }
 
   forms = {
+    name: NameForm,
     contact: ContactForm,
     experience: ExperienceForm,
     skill: SkillForm,
@@ -49,16 +51,18 @@ class EditModal extends React.Component {
         <Modal.Actions>
           <Button basic inverted onClick={this.props.onClose}>
             Cancel
-            </Button>
-          <Button
-            negative
-            basic
-            inverted
-            icon='delete'
-            labelPosition='left'
-            content="Delete"
-            onClick={this.handleDelete}
-          />
+          </Button>
+          {this.props.onDelete &&
+            <Button
+              negative
+              basic
+              inverted
+              icon='delete'
+              labelPosition='left'
+              content="Delete"
+              onClick={this.handleDelete}
+            />
+          }
           <Button
             positive
             basic
