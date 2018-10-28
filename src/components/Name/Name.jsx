@@ -1,29 +1,44 @@
-import _ from 'lodash';
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
 import base from '../../services/base';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
+import { AuthContext } from '../../services/AuthContext';
 
 class Name extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showEditNameModal: false,
+      uid: '',
       name: '',
+      showEditNameModal: false,
     };
   }
 
-  componentDidMount() {
-    this.ref = base.syncState('name', {
+  async componentDidMount() {
+    console.log('auth', this.state)
+    this.ref = base.syncState(`${this.state.uid}/name`, {
       context: this,
       state: 'name'
     });
   }
 
   componentDidUpdate() {
-    console.log('Name update', this.state);
+    if (this.state.uid !== this.context.uid) {
+      this.setState({
+        uid: this.context.uid
+      });
+      console.log('auth update', this.context.uid);
+      base.removeBinding(this.ref);
+      this.ref = base.syncState(`${this.context.uid}/name`, {
+        context: this,
+        state: 'name'
+      });
+      console.log('state contents', this.state);
+      // this.forceUpdate();
+    }
   }
+
   componentWillUnmount() {
     base.removeBinding(this.ref);
   }
@@ -68,5 +83,7 @@ class Name extends React.Component {
     );
   }
 }
+
+Name.contextType = AuthContext;
 
 export default Name;
