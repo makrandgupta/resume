@@ -1,9 +1,9 @@
 import React from 'react';
-import FacebookButton from './Buttons/FacebookButton';
-import GithubButton from './Buttons/GithubButton';
-import GoogleButton from './Buttons/GoogleButton';
+import FacebookButton from './components/FacebookButton';
+import GithubButton from './components/GithubButton';
+import GoogleButton from './components/GoogleButton';
 
-const Login = ( { authenticate }) => (
+const SignIn = ( { authenticate }) => (
   <nav>
     <p>Sign in to manage your resume.</p>
 
@@ -13,4 +13,4 @@ const Login = ( { authenticate }) => (
   </nav>
 );
 
-export default Login;
+export default SignIn;

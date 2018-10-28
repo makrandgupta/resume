@@ -3,7 +3,7 @@ import { Container, Header } from 'semantic-ui-react';
 import base from '../../services/base';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
-import { AuthContext } from '../../services/AuthContext';
+import { AuthContext } from '../Auth/AuthContext';
 
 class Name extends React.Component {
   constructor(props) {
