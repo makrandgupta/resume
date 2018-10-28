@@ -1,16 +1,16 @@
 import firebase from 'firebase';
 import _ from 'lodash';
 import React from 'react';
-import { Container, Divider, Message, Button } from 'semantic-ui-react';
+import { Button, Container, Divider, Message } from 'semantic-ui-react';
+import SignOutButton from './components/Buttons/SignOutButton';
 import Contact from './components/Contact/Contact';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
-import Login from './components/Login';
 import Name from './components/Name/Name';
+import SignIn from './components/SignIn';
 import Skill from './components/Skill/Skill';
 import { AuthProvider } from './services/AuthContext';
 import base, { firebaseApp } from './services/base';
-import SignOutButton from './components/Buttons/SignOutButton';
 
 const AUTH_ERROR_CODE_MAP = {
   ACCOUNT_EXISTS: 'auth/account-exists-with-different-credential',
@@ -139,7 +139,7 @@ class App extends React.Component {
   render() {
     return (
       <Container style={{ marginTop: '3em', marginBottom: '3em' }} text>
-        {_.isEmpty(this.state.uid) && <Login authenticate={this.authenticate} />}
+        {_.isEmpty(this.state.uid) && <SignIn authenticate={this.authenticate} />}
         {this.state.showLinkAccountsQuestionMessage && this.renderLinkAccountsQuestionMessage()}
         {this.state.showLinkAccountsSuccessMessage && this.renderLinkAccountsSuccessMessage()}
         {!_.isEmpty(this.state.uid) && (
