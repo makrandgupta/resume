@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button, Icon } from 'semantic-ui-react';
+import FacebookButton from './Buttons/FacebookButton';
+import GithubButton from './Buttons/GithubButton';
+import GoogleButton from './Buttons/GoogleButton';
+
 
 
 const Login = ( { authenticate }) => (
@@ -8,17 +11,9 @@ const Login = ( { authenticate }) => (
 
     <p>Sign in to manage your resume.</p>
 
-    <Button color='black' onClick={() => authenticate('Github')}>
-      <Icon name='github' /> Github
-    </Button>
-
-    <Button color='google plus' onClick={() => authenticate('Google')}>
-      <Icon name='google' /> Google
-    </Button>
-
-    <Button color='facebook' onClick={() => authenticate('Facebook')}>
-      <Icon name='facebook' /> Facebook
-    </Button>
+    <GithubButton onClick={() => authenticate('Github')}/>
+    <GoogleButton onClick={() => authenticate('Google')}/>
+    <FacebookButton onClick={() => authenticate('Facebook')}/>
   </nav>
 );
 
