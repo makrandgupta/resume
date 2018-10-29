@@ -24,7 +24,11 @@ class Auth extends React.Component {
   }
 
   componentDidMount() {
-
+    firebase.auth().onAuthStateChanged(user => {
+      if (!_.isEmpty(user)) {
+        this.handleAuthSuccess({ user });
+      }
+    })
   }
 
   handleAuthSuccess = async (authData) => {
