@@ -2,27 +2,43 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
+import { AuthContext } from '../Auth/AuthContext';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
-import EducationForm from './EducationForm';
 import SectionHeader from '../SectionHeader';
+import EducationForm from './EducationForm';
 
-export default class Education extends React.Component {
+
+class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      educations: {},
+      educationToEdit: {},
       showAddEducationForm: false,
       showEditEducationModal: false,
-      educationToEdit: {},
-      educations: {},
+      uid: '',
     };
   }
 
   componentDidMount() {
-    this.ref = base.syncState('educations', {
+    this.ref = base.syncState(`${this.state.uid}/educations`,  {
       context: this,
       state: 'educations'
     });
+  }
+
+  componentDidUpdate() {
+    if (this.state.uid !== this.context.uid) {
+      this.setState({
+        uid: this.context.uid
+      });
+      base.removeBinding(this.ref);
+      this.ref = base.syncState(`${this.context.uid}/educations`, {
+        context: this,
+        state: 'educations'
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -124,3 +140,7 @@ export default class Education extends React.Component {
     );
   }
 }
+
+Education.contextType = AuthContext;
+
+export default Education;

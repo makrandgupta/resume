@@ -6,23 +6,38 @@ import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
 import ExperienceForm from './ExperienceForm';
 import SectionHeader from '../SectionHeader';
+import { AuthContext } from '../Auth/AuthContext';
 
 class Experience extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAddExperienceForm: false,
-      showEditExperienceModal: false,
       experienceToEdit: {},
       experiences: {},
+      showAddExperienceForm: false,
+      showEditExperienceModal: false,
+      uid: '',
     };
   }
 
   componentDidMount() {
-    this.ref = base.syncState('experiences', {
+    this.ref = base.syncState(`${this.state.uid}/experiences`, {
       context: this,
       state: 'experiences'
     });
+  }
+
+  componentDidUpdate() {
+    if (this.state.uid !== this.context.uid) {
+      this.setState({
+        uid: this.context.uid
+      });
+      base.removeBinding(this.ref);
+      this.ref = base.syncState(`${this.context.uid}/experiences`, {
+        context: this,
+        state: 'experiences'
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -46,7 +61,6 @@ class Experience extends React.Component {
     experiences[experienceKey] = null;
     this.setState({ experiences });
   }
-
 
   // START: Display ExperienceForm handlers
 
@@ -123,5 +137,7 @@ class Experience extends React.Component {
     );
   }
 }
+
+Experience.contextType = AuthContext;
 
 export default Experience;

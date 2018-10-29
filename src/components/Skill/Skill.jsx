@@ -2,10 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
+import { AuthContext } from '../Auth/AuthContext';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
-import SkillForm from './SkillForm';
 import SectionHeader from '../SectionHeader';
+import SkillForm from './SkillForm';
 
 class Skill extends React.Component {
   constructor(props) {
@@ -14,14 +15,28 @@ class Skill extends React.Component {
       showAddSkillForm: false,
       showEditSkillModal: false,
       skills: {},
+      uid: '',
     };
   }
 
   componentDidMount() {
-    this.ref = base.syncState('skills', {
+    this.ref = base.syncState(`${this.state.uid}/skills`, {
       context: this,
       state: 'skills'
     });
+  }
+
+  componentDidUpdate() {
+    if (this.state.uid !== this.context.uid) {
+      this.setState({
+        uid: this.context.uid
+      });
+      base.removeBinding(this.ref);
+      this.ref = base.syncState(`${this.context.uid}/skills`, {
+        context: this,
+        state: 'skills'
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -116,5 +131,7 @@ class Skill extends React.Component {
     );
   }
 }
+
+Skill.contextType = AuthContext;
 
 export default Skill;

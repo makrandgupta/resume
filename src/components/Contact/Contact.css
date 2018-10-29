@@ -20,6 +20,13 @@ h3.header button.circular.icon {
     margin: 0.5rem !important;
 }
 
+
+h1 button.circular.icon {
+    font-size: 0.75em !important;
+    padding: 0.5rem !important;
+    margin: 0.5rem !important;
+}
+
 .list .item button.circular.icon {
     font-size: 0.75em;
     padding: 0.5rem !important;

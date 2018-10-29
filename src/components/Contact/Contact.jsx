@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import base from '../../services/base';
+import { AuthContext } from '../Auth/AuthContext';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
 import SectionHeader from '../SectionHeader';
@@ -12,18 +13,32 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      contacts: {},
+      contactToEdit: {},
       showAddContactForm: false,
       showEditContactModal: false,
-      contactToEdit: {},
-      contacts: {},
+      uid: '',
     };
   }
 
   componentDidMount() {
-    this.ref = base.syncState('contacts', {
+    this.ref = base.syncState(`${this.state.uid}/contacts`, {
       context: this,
       state: 'contacts'
     });
+  }
+
+  componentDidUpdate() {
+    if (this.state.uid !== this.context.uid) {
+      this.setState({
+        uid: this.context.uid
+      });
+      base.removeBinding(this.ref);
+      this.ref = base.syncState(`${this.context.uid}/contacts`, {
+        context: this,
+        state: 'contacts'
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -123,5 +138,7 @@ class Contact extends React.Component {
     );
   }
 }
+
+Contact.contextType = AuthContext;
 
 export default Contact;
