@@ -15,8 +15,7 @@ class Name extends React.Component {
     };
   }
 
-  async componentDidMount() {
-    console.log('auth', this.state)
+  componentDidMount() {
     this.ref = base.syncState(`${this.state.uid}/name`, {
       context: this,
       state: 'name'
@@ -28,14 +27,12 @@ class Name extends React.Component {
       this.setState({
         uid: this.context.uid
       });
-      console.log('auth update', this.context.uid);
       base.removeBinding(this.ref);
       this.ref = base.syncState(`${this.context.uid}/name`, {
         context: this,
         state: 'name'
       });
-      console.log('state contents', this.state);
-      // this.forceUpdate();
+      this.forceUpdate();
     }
   }
 
