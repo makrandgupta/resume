@@ -17,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "surge --project ./build --domain resume.makgupta.com",
+    "build:deploy": "npm run build && npm run deploy",
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint src/**/*.jsx",
     "lint:fix": "eslint src/**/*.jsx --fix"
