@@ -25,3 +25,6 @@ yarn-error.log*
 
 # Ignore firebase config keys
 **/firebase-config.json
+
+# firebase files
+.firebase
