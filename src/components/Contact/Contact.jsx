@@ -6,7 +6,6 @@ import { AuthContext } from '../Auth/AuthContext';
 import EditButton from '../Buttons/EditButton';
 import EditModal from '../EditModal';
 import SectionHeader from '../SectionHeader';
-import './Contact.css';
 import ContactForm from './ContactForm';
 
 class Contact extends React.Component {

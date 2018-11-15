@@ -1,58 +1,48 @@
-body {
-	font-size: 1.2rem;
-	padding: 0 20%;
+body, html {
+	height: initial;
 }
 
-.app {
-	text-align: center;
-	font-family: monospace;
-	padding: 20px;
+/* Contact Info Sub-Headings: Capitalize */
+h3.ui.header, .modal .header {
+	text-transform: capitalize; 
 }
 
-.app-title {
-	font-size: 3rem;
-	padding-bottom: 20px;
+/* Section Headers: Fix padding */
+.ui.borderless.menu .item {
+	padding: .1em .3em;
 }
 
-.component-container {
-	padding: 10px;
-	text-align: left;
+/* Section Headers: Borderless */
+.ui.borderless.menu {
+	border: none;
+	box-shadow: none;
 }
 
-.component-title {
-	font-size: 2rem;
-	display: flex;
-	align-items: center;
+/* Edit Buttons: Size and position */
+h3.header button.circular.icon {
+	font-size: 0.75em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5rem !important;
+	margin: 0.5rem !important;
 }
 
-.component-content {
-	padding: 10px 15px;
+/* Name Edit Button: Size */
+h1 button.circular.icon {
+	font-size: 0.75em !important;
+	padding: 0.5rem !important;
+	margin: 0.5rem !important;
 }
 
-.flex {
-	display: flex;
+/* Skills Edit Button: Size */
+.list .item button.circular.icon {
+	font-size: 0.75em;
+	padding: 0.5rem !important;
 }
 
-.flex.horizontal {
-	flex-direction: row;
-}
-
-.flex.vertical {
-	flex-direction: column;
-}
-
-.flex.wrap {
-	flex-wrap: wrap;
-}
-
-.flex.space-evenly {
-	justify-content: space-evenly;
-}
-
-.flex.space-around {
-	justify-content: space-around;
-}
-
-.flex.space-between {
-	justify-content: space-between;
+/* Delete Button: Position */
+.modal .actions button.negative.left {
+	position: absolute !important;
+	left: 0.5em;
 }

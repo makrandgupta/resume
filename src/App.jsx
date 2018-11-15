@@ -8,6 +8,7 @@ import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Name from './components/Name/Name';
 import Skill from './components/Skill/Skill';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
