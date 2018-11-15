@@ -34,7 +34,15 @@ class Auth extends React.Component {
   handleAuthSuccess = async (authData) => {
     const uid = _.get(authData, 'user.uid');
 
-    const userData = await base.fetch(uid, {});
+
+    let userData;
+
+    try {
+      userData = await base.fetch(uid, {});
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error fetching user data', error);
+    }
 
     if (_.isEmpty(userData)) {
       const initData = {
@@ -47,9 +55,14 @@ class Auth extends React.Component {
         }
       };
 
-      await base.post(uid, {
-        data: initData,
-      });
+      try {
+        await base.post(uid, {
+          data: initData,
+        });
+      } catch (error) {
+        // TODO: Show some error to the user
+        return console.error('error initializing user', error);
+      }
     }
 
     this.setState({ uid });
@@ -68,16 +81,48 @@ class Auth extends React.Component {
   }
 
   handleLinkAccounts = async () => {
-    const providers = await firebase.auth().fetchProvidersForEmail(this.state.authEmail) // returns ["provider.com"]
+    if (_.isEmpty(this.state.newCredential)) {
+      // TODO: Show some error to the user
+      return console.log('handleLinkAccounts: new credential not set')
+    }
+
+    let providers;
+
+    try {
+      providers = await firebase.auth().fetchProvidersForEmail(this.state.authEmail) // returns ["provider.com"]
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error fetching providers', error);
+    }
     const providerName = providers[0].split('.')[0]; // grab first provider and get provider name
     const providerNameCapitalized = `${providerName[0].toUpperCase()}${providerName.slice(1)}`; // capitalize provider name
     const provider = new firebase.auth[`${providerNameCapitalized}AuthProvider`]();
     provider.setCustomParameters({ login_hint: this.state.authEmail });
-    const providerData = await firebase.auth().signInWithPopup(provider)
 
-    const user = await firebase.auth().signInWithCredential(providerData.credential)
+    let providerData;
 
-    await user.linkWithCredential(this.state.newCredential)
+    try {
+      providerData = await firebase.auth().signInWithPopup(provider);
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error signing in with default provider', error);
+    }
+
+    let user;
+
+    try {
+      user = await firebase.auth().signInWithCredential(providerData.credential);
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error fetching user from credentials', error);
+    }
+
+    try {
+      await user.linkWithCredential(this.state.newCredential);
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error linking accounts', error);
+    }
 
     this.setState({
       newCredential: {},
@@ -97,7 +142,12 @@ class Auth extends React.Component {
   }
 
   handleSignOut = async () => {
-    await firebase.auth().signOut();
+    try {
+      await firebase.auth().signOut();
+    } catch (error) {
+      // TODO: Show some error to the user
+      return console.error('error signing out', error);
+    }
     this.setState({ uid: null });
     this.props.onSignOut();
   };
@@ -147,7 +197,6 @@ class Auth extends React.Component {
         {!_.isEmpty(this.state.uid) && <SignOutButton onClick={this.handleSignOut} />}
         {this.state.showLinkAccountsQuestionMessage && this.renderLinkAccountsQuestionMessage()}
         {this.state.showLinkAccountsSuccessMessage && this.renderLinkAccountsSuccessMessage()}
-        
       </div>
     )
   }
