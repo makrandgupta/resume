@@ -1,0 +1,211 @@
+<body>
+  <style>
+    body {
+      font-size: 1em;
+      font-family: "Open Sans";
+      width: 8.5in;
+      height: 11in;
+      /* border: solid; */
+      /* box-shadow: 5px 5px; */
+      display: flex;
+    }
+
+    .left-column {
+      width: 35%;
+      height: 96%;
+      background: rgba(34, 36, 38, .1);
+      border: 1px solid rgba(34, 36, 38, .25);
+      border-radius: 0.4rem;
+      margin: 0.3em;
+      margin-right: 1em;
+      padding: 15px;
+      font-size: 1em;
+    }
+
+    .name {
+      font-size: 3em;
+      text-align: left;
+      margin-bottom: 0.5em;
+    }
+
+    .section-container {
+      padding: 0.5rem 0;
+      margin: 0 1em 1em 0em;
+      width: 100%;
+    }
+
+    .section-header {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    .section-container.contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+    }
+
+    .contact-type {
+      font-weight: bold;
+      width: 30%;
+      text-align: left;
+    }
+
+    .item {
+      width: 100%;
+      /*   border: solid; */
+    }
+
+    .item-header {
+      font-size: 1.25em;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .item-subheader {
+      font-size: 0.85em;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .item-duration {
+      text-align: right;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- 
+    incoming context: {
+      "contacts" : {
+        "contact1542151514715" : {
+          "type" : "Phone",
+          "value" : "134234234"
+        },
+        "contact1542262350268" : {
+          "type" : "LinkedIn",
+          "value" : "lokitbala"
+        },
+        "contactEmail" : {
+          "type" : "email",
+          "value" : "makrand1996@gmail.com"
+        }
+      },
+      "educations" : {
+        "edu1542151539158" : {
+          "city" : "Toronto",
+          "country" : "Canada",
+          "degree" : "BSc",
+          "field" : "Computer Science, Statistics",
+          "school" : "University of Toronto"
+        }
+      },
+      "experiences" : {
+        "exp1542151238746" : {
+          "company" : "DevFound",
+          "currentPosition" : true,
+          "description" : "Amazing <b>TPM</b> stuff",
+          "fromMonth" : 3,
+          "fromYear" : 2016,
+          "title" : "TPM"
+        },
+        "exp1542151382933" : {
+          "city" : "Toronto",
+          "company" : "DevFound",
+          "country" : "Canada",
+          "currentPosition" : true,
+          "description" : "Amazing <b>TPM</b> stuff",
+          "fromMonth" : 3,
+          "fromYear" : 2016,
+          "title" : "TPM"
+        }
+      },
+      "name" : "Makrand Gupta",
+      "skills" : {
+        "skill1542151524789" : {
+          "name" : "Dev"
+        }
+      }
+    }
+
+
+   -->
+  <div class="left-column">
+    <div class="name">Makrand Gupta</div>
+    <div class="section-container contacts">
+      <div class="contact-item">
+        <div class="contact-type">Phone</div>
+        <div class="contact-data">6478791234</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-type">Email</div>
+        <div class="contact-data">makrand1996@gmail.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-type">Github</div>
+        <div class="contact-data">makrandgupta</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-type">Medium</div>
+        <div class="contact-data">makrandgupta</div>
+      </div>
+    </div>
+
+    <div class="section-container education">
+      <div class="section-header">Education</div>
+      <div class="item edu">
+        <div class="item-header">University of Toronto</div>
+        <div class="item-subheader">
+          <span>Toronto, Canada</span>
+          <span class="item-duration">Apr 2019</span>
+        </div>
+
+        <div class="item-description">
+          Bachelor's of Science, Computer Science
+        </div>
+      </div>
+    </div>
+
+    <div class="section-container skills">
+      <div class="section-header">Skills</div>
+      <ul>
+        <li>React</li>
+        <li>Angular</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-container experience">
+    <div class="section-header">Experience</div>
+    <div class="item exp">
+      <div class="item-header">
+        <div>
+          Software Engineer - Connected
+        </div>
+      </div>
+      <div class="item-subheader">
+        <span>Toronto, Canada</span>
+        <span class="item-duration">
+          <span>May 2018</span> - <span>Sep 2018</span>
+        </span>
+      </div>
+
+      <div class="item-description">
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta, purus in eleifend volutpat.
+        <br>
+        - Donec lacinia leo quis facilisis pulvinar. Donec eget elit efficitur, efficitur eros commodo.
+        <br>
+        - In hac habitasse platea dictumst. Nulla gravida mi eget sapien hendrerit, in mollis lectus congue.</div>
+    </div>
+  </div>
+</body>
